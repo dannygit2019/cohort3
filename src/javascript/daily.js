@@ -13,10 +13,26 @@ const functions = {
                 return "false";
         }
     },
+    /// Daily exercise Oct-09-2019
     makeEmailArr: (anArray) => {
         let fName= anArray[0].toLowerCase();
         let lName= anArray[1].toLowerCase();
         return `${fName}.${lName}@evolveu.ca`;
+    },
+
+    /// Daily exercise Oct-11-2019
+    makeEmailObj: (anObject) => {
+        // Option 1:
+        let fullname = anObject.fname + "." + anObject.lname + "@evolveu.ca";
+        return fullname.toLowerCase();
+        /* option 2
+        let fullname=anObject.fname + "." + anObject.lname;
+        let result= fullname.toLowerCase() + "@evolveu.ca";
+        return result;
+        */
+        /* Option 3
+        return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
+        */
     }
 }
 
