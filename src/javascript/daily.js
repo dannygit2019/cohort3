@@ -12,6 +12,11 @@ const functions = {
                 console.log(message + combine);
                 return "false";
         }
+    },
+    makeEmailArr: (anArray) => {
+        let fName= anArray[0].toLowerCase();
+        let lName= anArray[1].toLowerCase();
+        return `${fName}.${lName}@evolveu.ca`;
     }
 }
 
