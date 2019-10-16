@@ -97,14 +97,14 @@
         <div class="labels">
             <input type="label" value="Enter First number">
             <input type="label" value="Enter Second number">
-            <input type="label" value="Display">
+            <!-- <input type="label" value="Display"> -->
             <input type="label" value="Result">
         </div>
         <div class="inputs">
             <input type="text" id="num1" value=0>
             <input type="text" id="num2" value=0>
-            <input type="text" id="dispformula" disabled>
-            <input type="text" id="result" disabled>
+            <!-- <input type="text" id="dispformula" disabled> -->
+            <input type="text" id="result" disabled value=0>
         </div>
         
         <div class="buttons">
@@ -119,27 +119,9 @@
     <!-- working on Canadian taxes -->
     <div>
         <h1>Canadian Taxes (Federal Taxes)</h1>
-        <input type="label" disabled value="Enter your taxable income from line 260 of oyur return">
-        <input type="text" min="1" id="line1" class="numberDisplay">
-        <input type="label" value="Line 1" disabled><br>
-        <input type="label" disabled value="Base Amount">
-        <input type="text" id="line2" class="numberDisplay" disabled>
-        <input type="label" value="Line 2" disabled><br>
-        <input type="label" disabled value="Line 1 minus Line 2 (Can not be negative)">
-        <input type="text" id="line3" class="numberDisplay" disabled>
-        <input type="label" value="Line 3" disabled><br>
-        <input type="label" disabled value="Federal tax rate">
-        <input type="text" id="line4" class="numberDisplay" disabled>
-        <input type="label" value="Line 4" disabled><br>
-        <input type="label" disabled value="Multiply the amount on line 3 by the tax rate on line 4">
-        <input type="text" id="line5" class="numberDisplay" disabled>
-        <input type="label" value="Line 5" disabled><br>
-        <input type="label" disabled value="Tax on the amount from line 2">
-        <input type="text" id="line6" class="numberDisplay" disabled>
-        <input type="label" value="Line 6" disabled><br>
-        <input type="label" disabled value="Total Federal tax (Add lines 5 and 6">
-        <input type="text" id="line7" class="numberDisplay" disabled>
-        <input type="label" value="Line 7" disabled><br>
+        <input type="label" disabled value="Enter your taxable income">
+        <input type="text" id="incomeIn">
+        <input type="text" id="totalDisplay" value="totalTax" disabled>
         <button id="calculatetaxes">Calculate Taxes</button>
     </div>
 
@@ -159,7 +141,7 @@
         <h1>Working with Dictionaries</h1>
         <input type="text" id="pcode">
         <button id=lookup>Lookup</button>
-        <input type="label" id="lookupmessage" value="Message Area">
+        <input type="text" id="lookupmessage" value="Message Area" disabled>
 
 
     </div>
@@ -179,7 +161,7 @@
 
 
     <script type="module" src="./scripts/main.js"></script>
-    <script type="module" src="./scripts/indexCalculation.js"></script>
+    <!-- <script type="module" src="./scripts/indexCalculation.js"></script> -->
 
     
     <script>
