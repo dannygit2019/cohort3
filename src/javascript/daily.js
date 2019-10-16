@@ -13,27 +13,79 @@ const functions = {
                 return "false";
         }
     },
-    /// Daily exercise Oct-09-2019
+    // Daily exercise Oct-09-2019
     makeEmailArr: (anArray) => {
         let fName= anArray[0].toLowerCase();
         let lName= anArray[1].toLowerCase();
         return `${fName}.${lName}@evolveu.ca`;
     },
 
-    /// Daily exercise Oct-11-2019
+    // Daily exercise Oct-11-2019
     makeEmailObj: (anObject) => {
         // Option 1:
-        let fullname = anObject.fname + "." + anObject.lname + "@evolveu.ca";
-        return fullname.toLowerCase();
+            return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
         /* option 2
-        let fullname=anObject.fname + "." + anObject.lname;
-        let result= fullname.toLowerCase() + "@evolveu.ca";
-        return result;
+            let fullname=anObject.fname + "." + anObject.lname;
+            let result= fullname.toLowerCase() + "@evolveu.ca";
+            return result;
         */
         /* Option 3
-        return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
+            let fullname = anObject.fname + "." + anObject.lname + "@evolveu.ca";
+            return fullname.toLowerCase();
         */
+    },
+
+    // Daily exercise Oct-15-2019
+    forLoop: (forArray) => {
+        let i;
+        let newArray=[];
+        for (i=0; i < forArray.length; i++) {
+            newArray += forArray[i] + " ";
+        }
+        return newArray.trim();
+    },
+
+    whileLoop: (whileArray) => {
+        let i=0;
+        let newWhile=[];
+        while (i < whileArray.length) {
+            newWhile += whileArray[i] + " ";
+            i++; 
+        }
+        return newWhile.trim();
+    },
+    
+    doWhileLoop: (dowhilearray) => {
+        let i=0;
+        let newdowhile=[];
+        do {
+            newdowhile += dowhilearray[i];
+            i++;
+          }
+        
+        while (i < dowhilearray.length);
+        return newdowhile;
+    },
+
+    forInLoop: (objectInput) => {
+        let newObject;
+        let result="";
+        for (newObject in objectInput) {
+            result += objectInput[newObject] + " ";
+        } 
+        return result.trim();
+    },
+
+    forOf: (anArr) => {
+        let result=[];
+        let newText;
+        
+        for (newText of anArr) {
+            result.push(newText);
+        } 
+        
+        return result;
     }
-}
+};
 
 export default functions;
