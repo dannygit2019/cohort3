@@ -1,5 +1,26 @@
 import functions from './daily'
 
+// daily exercise Oct-16 & 17 2019
+
+test('advanced', () => {
+
+    let fruits = ["Banana", "Orange", "Lemon"];
+    let fruits2 = ["Banana", "Orange", "Lemon"];
+    let numArray =[2, 4, 6];
+    let numArray1 =[8,2,4,6];
+    let arrSort =[8,2,4,6];
+    
+    expect(functions.sliceExample(fruits)).toEqual(["Orange"]);
+    expect(functions.spliceExample(fruits)).toEqual(["Banana", "Kiwi", "Orange", "Lemon"]);
+    expect(functions.forEachExample(fruits2)).toEqual(["Banana", "Orange", "Lemon"]);
+    expect(functions.mapExample(numArray)).toEqual([4,8,12]);
+    expect(functions.reduceExample(numArray)).toEqual(12);
+    expect(functions.filterExample(numArray1)).toEqual([8,4,6]);
+    expect(functions.sortExample(arrSort)).toEqual([2,4,6,8]);
+
+});
+
+// **********************************
 test('check 2 parameters', () => {
    expect(functions.assertEquals("a","a")).toBe("true");
    expect(functions.assertEquals("a","b")).toBe("false");
