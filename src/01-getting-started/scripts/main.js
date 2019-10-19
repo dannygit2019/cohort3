@@ -11,7 +11,8 @@ idNumber.addEventListener('change', (() => {
 // working with calculator
 
 add.addEventListener("click", function(){
-    result.value = Calculation.add(Number(num1.value),Number(num2.value));  
+   
+   result.value = Calculation.add(Number(num1.value),Number(num2.value));  
 });
 subtract.addEventListener("click", function(){
     result.value = Calculation.subtract(Number(num1.value),Number(num2.value));  
@@ -24,6 +25,8 @@ division.addEventListener("click", function(){
 });
 clear.addEventListener("click", function(){
     result.value = Calculation.clearAll(); 
+    num1.value=Calculation.clearAll();
+    num2.value=Calculation.clearAll();
     result.value=0; 
 });
 
@@ -40,7 +43,7 @@ addarray.addEventListener("click",function() {
         message.value=Calculation.addClicked(Number(arrayinput.value));
 });
 showarray.addEventListener("click", function () {
-        message.value=Calculation.showarray("");
+        message.value=Calculation.showarray();
 });  
 
 totalarray.addEventListener("click",function() {
@@ -51,6 +54,7 @@ totalarray.addEventListener("click",function() {
 cleararray.addEventListener("click", function () {
     message.value=Calculation.clearArray();
     arrayinput.value="";
+    
 });
 
 // working with lookup dictionaries

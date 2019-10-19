@@ -1,4 +1,7 @@
+
 let newarray=[]; // to store a newarray
+let newString=[];
+
 let provinceObject = [
     {
         provinceCode: "ab",
@@ -37,9 +40,8 @@ const Calculation = {
     },
 
     clearAll: () => {
-        document.getElementById("num1").value="";
-        document.getElementById("num2").value="";
-        document.getElementById("num1").focus();
+
+        return "";
     },
 
     // *** End of working with Calculators ******
@@ -60,31 +62,26 @@ const Calculation = {
         // when less than or equal to $47,630
         if (incomeInput <= incomeRange[0]) { 
             totalTax = (((incomeInput - baseamount[0])) * taxrate[0]) + Number(taxonBaseamount[0]);
-            totalTax=Calculation.numberFormat(totalTax);
-            return totalTax; // return when less than or equal to $47,630
+            return Calculation.numberFormat(totalTax.toFixed(2));
         }
         // less than or equal to $95,259
         if (incomeInput <= incomeRange[1]) { 
             totalTax = (((incomeInput - baseamount[1])) * taxrate[1]) + Number(taxonBaseamount[1]);
-            totalTax=Calculation.numberFormat(totalTax);
-            return totalTax; // return when less than or equal to $95,259
+            return Calculation.numberFormat(totalTax.toFixed(2));
         }
         // less than or equal to $147,667
         if (incomeInput <= incomeRange[2]) {
             totalTax = (((incomeInput - baseamount[2])) * taxrate[2]) + Number(taxonBaseamount[2]);
-            totalTax=Calculation.numberFormat(totalTax);
-            return totalTax; // return when less than or equal to $147,667
+            return Calculation.numberFormat(totalTax.toFixed(2));
         }
         // less than or equal to $210,371
         if (incomeInput <= incomeRange[3]) {
             totalTax = (((incomeInput - baseamount[3])) * taxrate[3]) + Number(taxonBaseamount[3]);
-            totalTax=Calculation.numberFormat(totalTax);
-            return totalTax; // return when less than or equal to $210,371
+            return Calculation.numberFormat(totalTax.toFixed(2));
         }
         // > $210,371
         totalTax = (((incomeInput - baseamount[4])) * taxrate[4]) + Number(taxonBaseamount[4]);
-        totalTax=Calculation.numberFormat(totalTax);
-        return totalTax; // return when > $210,371
+        return Calculation.numberFormat(totalTax.toFixed(2));
 
     },
 // ****** End of working with Canadian Taxes
@@ -95,18 +92,19 @@ const Calculation = {
 
     addClicked: (arrInput) => {
         let messageDisplay="The number has been added to the array";
-        if (arrInput) {
-            newarray.push(arrInput);
+            newarray +=arrInput + ",";
+            newString = newarray.substring(0, newarray.length - 1);
             return messageDisplay;
-        };
     },
 
-    showarray: (arrayInput) => {
-        return newarray;  
+
+    showarray: () => {
+        console.log(newString);
+        return newString; 
     },
 
     clearArray: () => {  
-        newarray=[];
+        newString=[];
         return "";
     },
     // add them up
@@ -127,15 +125,14 @@ const Calculation = {
 
     dictionaries: (pcode) => {
         let i=0;
+        let message="Invalid Province Code";
         for (i; i < provinceObject.length; i++) {
             if (provinceObject[i].provinceCode === pcode.toLowerCase()) {
                 return provinceObject[i].provincename;
             }
         } 
-        return "Invalid Province Code";
-            
-    }
-
+        return message;
+    },
 
 };
 
