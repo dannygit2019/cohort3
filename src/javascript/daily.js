@@ -1,5 +1,26 @@
 
 const functions = {
+
+    makeEmailObj: (anObject) => {
+
+            return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
+            //return `${(anObject.fname).toLowerCase()}.${(anObject.lname.toLowerCase())}@evolveu.ca`;
+        
+    },
+    loopStaff: (staff) => {
+        //return staff;  
+        let arrstaff=[];
+        let emailInput;
+        staff.forEach(function(getFromInput) {
+            arrstaff.push(functions.makeEmailObj(getFromInput));
+            emailInput=arrstaff;
+        });
+        return emailInput;
+       
+    },
+
+
+
 // **************************************************************8
 // Daily exercise Oct-16 and 17
 /*  slice
@@ -95,19 +116,19 @@ const functions = {
     },
 
     // Daily exercise Oct-11-2019
-    makeEmailObj: (anObject) => {
-        // Option 1:
-            return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
-        /* option 2
-            let fullname=anObject.fname + "." + anObject.lname;
-            let result= fullname.toLowerCase() + "@evolveu.ca";
-            return result;
-        */
-        /* Option 3
-            let fullname = anObject.fname + "." + anObject.lname + "@evolveu.ca";
-            return fullname.toLowerCase();
-        */
-    },
+    // makeEmailObj: (anObject) => {
+    //     // Option 1:
+    //         return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;
+    //     /* option 2
+    //         let fullname=anObject.fname + "." + anObject.lname;
+    //         let result= fullname.toLowerCase() + "@evolveu.ca";
+    //         return result;
+    //     */
+    //     /* Option 3
+    //         let fullname = anObject.fname + "." + anObject.lname + "@evolveu.ca";
+    //         return fullname.toLowerCase();
+    //     */
+    // },
 
     // Daily exercise Oct-15-2019
     forLoop: (forArray) => {
