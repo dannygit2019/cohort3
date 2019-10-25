@@ -1,6 +1,32 @@
 
 const functions = {
 
+    // daily exercise Oct-24-2019
+    loopStaffIn: (staff) => {
+        // return 'a';
+        let emailInput;
+        let arrStaff = [];
+        
+        let arrIndex;
+        for (arrIndex in staff) { 
+            arrStaff.push(functions.makeEmailObj(staff[arrIndex]));
+            //emailInput=arrStaff;
+        } 
+        return arrStaff; //emailInput;
+       
+    },
+
+    loopStaffOf: (staff) => {
+        // return 'a';
+        let instanceOfArray = [];
+        let newArray=[];
+        for (instanceOfArray of staff) {
+            newArray.push(functions.makeEmailObj(instanceOfArray));
+          }
+          return newArray;
+       
+    },
+    
     makeEmailObj: (anObject) => {
 
             return `${(anObject.fname).toLowerCase()}.${(anObject.lname).toLowerCase()}@evolveu.ca`;

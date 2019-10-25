@@ -1,5 +1,4 @@
 import functions from './daily'
-// daily exercise Oct-21 2019
 const data = {
     staff: [
         { fname: "Jane", lname: "Smith", balance: 10 },
@@ -15,7 +14,33 @@ const data = {
     prov: "Alberta"
 };
 
-test('email builder for company', () => {
+
+
+
+// daily exercise Oct-24-2019
+test('email builder for company with ForIn', () => {
+
+    const staffEmail = functions.loopStaffIn(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[2])
+        .toEqual("emma.jones@evolveu.ca");
+
+});
+test('email builder for company with ForOf', () => {
+
+    const staffEmail = functions.loopStaffOf(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[2])
+        .toEqual("emma.jones@evolveu.ca");
+    
+});
+
+
+// daily exercise Oct-21 2019
+
+test('email builder for company ForEach', () => {
     const staffEmail = functions.loopStaff(data.staff);
     expect(staffEmail[0])
         .toEqual("jane.smith@evolveu.ca");
