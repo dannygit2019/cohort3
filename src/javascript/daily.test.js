@@ -13,9 +13,26 @@ const data = {
     city: "Calgary",
     prov: "Alberta"
 };
+// daily exercise Oct-25-2019
+test('email builder for company with ForEach', () => {
 
+    const staffEmail = functions.loopStaffForEach(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[2])
+        .toEqual("emma.jones@evolveu.ca");
 
+});
 
+test('email builder for company with Map', () => {
+
+    const staffEmail = functions.loopStaffMap(data.staff);
+    expect(staffEmail[0])
+        .toEqual("jane.smith@evolveu.ca");
+    expect(staffEmail[2])
+        .toEqual("emma.jones@evolveu.ca");
+
+});
 
 // daily exercise Oct-24-2019
 test('email builder for company with ForIn', () => {
@@ -40,7 +57,7 @@ test('email builder for company with ForOf', () => {
 
 // daily exercise Oct-21 2019
 
-test('email builder for company ForEach', () => {
+test('email builder for company For Each', () => {
     const staffEmail = functions.loopStaff(data.staff);
     expect(staffEmail[0])
         .toEqual("jane.smith@evolveu.ca");

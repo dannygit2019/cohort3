@@ -1,10 +1,37 @@
 
 const functions = {
+    // daily exercise Oct-25-2019
+    loopStaffForEach: (staff) => {
+        // return 'a';
+        let arrstaff=[];
+        let emailInput;
+        staff.forEach(function(getFromInput) {
+            arrstaff.push(functions.makeEmailObj(getFromInput));
+            emailInput=arrstaff;
+        });
+        return emailInput;
+       
+    },    
+    loopStaffMap: (staff) => {
+        //return 'a';
+        // let arrstaff=[];
+        // let emailInput;
+        // staff.forEach(function(getFromInput) {
+        //     arrstaff.push(functions.makeEmailObj(getFromInput));
+        //     emailInput=arrstaff;
+        // });
+        // return emailInput;
+        let arrStaff = staff.map(functions.makeEmailObj);
+        return arrStaff;
+       
+    },  
+
+
 
     // daily exercise Oct-24-2019
     loopStaffIn: (staff) => {
         // return 'a';
-        let emailInput;
+        //let emailInput;
         let arrStaff = [];
         
         let arrIndex;
