@@ -1,0 +1,84 @@
+.containerDiv {
+    border: 5px solid black;
+    display: table;
+    padding: 5px 35px 20px 35px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.containerDiv ol li.different {
+    list-style-type: none;
+
+}
+
+/* WORKING WITH CARDS */
+
+.carBox {
+    border: 1px solid black;
+    background: #E6E1E1;
+    text-align: center;
+    height: 800px;
+    width: 100%;
+
+}
+
+.h1card {  
+    text-align: left;
+  }
+
+.leftside {
+    border: 1px solid black;
+    display: inline-block;
+    height: 500px;
+    width: 600px;
+    background: lightblue;
+    margin-left: 1px; 
+    
+}
+
+
+.cards {
+    border: 5px solid black;
+    background: white;
+    display: inline-block;
+    width: 400px;
+    height: 100px;
+    margin: 10px 10px;
+    justify-content: center;
+    padding: 10px 10px; /* to adjust text-content */
+}
+
+.buttons {   
+   
+    display: inline-block;
+    margin: 20px 5px 10px 5px;
+    height: 50px;
+    width: 90px;
+
+}
+.addcart {
+    display: inline-block;
+    margin: 10px 5px 10px 5px;
+    
+}
+.rightside {
+    border: 1px solid black;
+    /* display: inline-block; */
+    float: right;
+    width: 600px;
+    height: 500px;
+    background:lightblue;
+    margin-right: 20px;
+}
+
+.insideright {
+    display: inline-block;
+    border: 5px solid black;
+    background: white;
+    margin: 5px 5px;
+    width: 500px;
+    height: 200px;
+    margin: 20px 10px 20px 10px;
+}
