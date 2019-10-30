@@ -13,6 +13,20 @@ const data = {
     city: "Calgary",
     prov: "Alberta"
 };
+
+// daily exercise Oct-29-2019
+test('Total of balance from staff', () => {
+
+    const staffEmail = functions.totalOfBalance(data.staff);
+    expect(staffEmail).toEqual(3823);
+});
+
+test('Average of balance from staff', () => {
+
+    const staffEmail = functions.averageOfBalance(data.staff);
+    expect(staffEmail).toEqual(546);
+});
+
 // daily exercise Oct-25-2019
 test('email builder for company with ForEach', () => {
 

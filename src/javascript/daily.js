@@ -1,5 +1,31 @@
 
 const functions = {
+    // daily Oct-29-2019
+    totalOfBalance: (staff) => {
+        //return "";
+        
+        let reducer = (accumulator, currentValue) => { return accumulator + currentValue;};
+        let newBalanceArray=[];
+        for (var i=0; i < staff.length;i++) {
+            newBalanceArray.push(staff[i].balance);
+        }
+        return newBalanceArray.reduce(reducer);
+    },
+
+    averageOfBalance: (staff) => {
+        //return "";
+        let averageBalance=0;
+        let totalBalance=0;
+        let reducer = (accumulator, currentValue) => { return accumulator + currentValue;};
+        let newBalanceArray=[];
+        for (var i=0; i < staff.length;i++) {
+            newBalanceArray.push(staff[i].balance);
+        }
+        totalBalance = (newBalanceArray.reduce(reducer));
+        averageBalance= totalBalance / newBalanceArray.length;
+        return Math.round(averageBalance);
+    },
+
     // daily exercise Oct-25-2019
     loopStaffForEach: (staff) => {
         // return 'a';
