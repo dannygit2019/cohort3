@@ -9,26 +9,55 @@
 </head>
 <body>
     <div class="container">
-        <div class="container firstcard" >
-            <h4>User Interface for a Single Account</h4>
-            <label for="txt" class="formatLabel">Account Type: </label> &ensp;
-            <input type="text" name="txt" id="txtAccountType" class="txtInput"> <br>             
-            
-            <label for="initialamount" class="formatLabel">Initial Balance: </label>&ensp;
-            <input type="number" name="initialamount" id="txtInitial" class="txtInput"> <br>
-            
-            <label for="amount" class="formatLabel">Enter Amount: </label>&ensp;
-            <input type="number" name="amount" id="txtamount" class="txtInput"> <br>
-            
-            <label for="balance" class="formatLabel">Effective Balance: </label>&ensp;
-            <input type="number" name="balance" id="txtBalance" class="txtInput" disabled> <br>
-            <div class="buttons">
-                <button class="btn" id="deposit">Deposit</button>
-                <button class="btn" id="withdraw">Withdraw</button>
+        <div class="smallcontainer" id="smallcontainer">
+            <h2>Welcome to our Bank</h2>
+            <div>
+                <button id="btnNewAcc" class="topbuttons">Add New Account</button>
+                <button id="btnAccDetail" class="topbuttons">Transaction</button>
+                <button id="btnTotal" class="topbuttons">Total of All Accounts</button>
+                <button id="btnHighLow" class="topbuttons">Show Highest-Lowest Value Account</button>
             </div>
-        </div>
+            <div class="displayarea" id="displayarea">
+                <!-- <p></p> -->
+            </div>
+            <div class="displayarea displayarea2" id="displayarea2"></div>
 
+  
+            <!-- <div class="newAccInfo" id="newAccInfo">
+                <h4>Creating A New Account</h4>
+                <label for="txt" class="newAcc">Account Type: </label> &ensp;
+                <input type="text" name="txt" id="txtAccountType" class="newAcc">            
+                 
+                    <button class="btnNewAcc" id="create">Create</button>
+                    <button class="btnNewAcc" id="cancel">Cancel</button>
+              
+            </div> -->
+            <!-- <div class="container showDetail" id="showDetail" >
+                <h4>Welcome to our Bank</h4>
+                <label for="txt" class="formatLabel">Account Type: </label>&ensp; 
+                
+                <select name="drop1" id="selectAccountType" class="selectInput">
+                </select><br>
+                
+                <label for="initialamount" class="formatLabel">Initial Balance: </label>&ensp;
+                <input type="number" name="initialamount" id="txtInitial" class="txtInput"> <br>
+                
+                <label for="amount" class="formatLabel">Enter Amount: </label>&ensp;
+                <input type="number" name="amount" id="txtamount" class="txtInput"> <br>
+                
+                <label for="balance" class="formatLabel">Effective Balance: </label>&ensp;
+                <input type="number" name="balance" id="txtBalance" class="txtInput" disabled> <br>
+                <div class="buttons">
+                    <button class="btn" id="deposit">Deposit</button>
+                    <button class="btn" id="withdraw">Withdraw</button>
+                    <button class="btn" id="deleteAcc">Delete this Account</button>
+                </div>
+            </div> -->
+
+
+        </div>
     </div>
     <script type="module" src="./index.js"></script>
+    
 </body>
 </html>
