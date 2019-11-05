@@ -28,13 +28,10 @@
 
         addAccount(accName, initBalance) {
             this.accountHolder.push(new Account(accName,initBalance));
-            //console.log(this.accountHolder);
-            
-            return this.accountHolder;
+            //return this.accountHolder;
         }
 
         showAccName() {
-            //console.log(this.accountHolder);
             return this.accountHolder;
         }
 
@@ -142,7 +139,7 @@
             node.appendChild(divForOldAcc);
 
             let lblaccountName=document.createElement("label");
-            lblaccountName.textContent="Select Account Name:";
+            lblaccountName.textContent="Enter Account Name:";
             lblaccountName.setAttribute("class","formatLabel");
             divForOldAcc.appendChild(aBreak);
             divForOldAcc.appendChild(lblaccountName);
