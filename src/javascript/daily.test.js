@@ -13,6 +13,15 @@ const data = {
     city: "Calgary",
     prov: "Alberta"
 };
+// daily exercise Nov-06-2019
+test('creating new array for balances >= 1000 from staff', () => {
+    
+    const staffEmail = functions.balOver1000(data.staff);
+    // expect(staffEmail).toEqual([{ fname: 'Liam', lname: 'Henry', balance: 1000 },{ fname: 'Emma', lname: 'Jones', balance: 1330 }]);
+    expect(staffEmail).toEqual([ 1000, 1330 ]);
+});
+
+
 
 // daily exercise Oct-29-2019
 test('Total of balance from staff', () => {

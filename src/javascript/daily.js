@@ -1,19 +1,43 @@
 
 const functions = {
-    // daily Oct-29-2019
-    totalOfBalance: (staff) => {
-        //return "";
+    // daily Nov-06-2019 creating a new array for balances >= 1000
+    balOver1000: (staff) => {
+
+        let newArray = staff.filter( (num) => num.balance >= 1000);
+        let arrayOver1000 = newArray.map((filterNum) => filterNum.balance);
+        return arrayOver1000;
+     
+        // let newArray = staff.map( (num) => num.balance);
+        // let arrayOver1000 = newArray.filter((filterNum) => filterNum >= 1000);
+        // return arrayOver1000;
         
-        let reducer = (accumulator, currentValue) => { return accumulator + currentValue;};
+    },
+    
+    
+    
+    // daily Oct-29-2019
+    
+    totalOfBalance: (staff) => {
+        
+        
         let newBalanceArray=[];
-        for (var i=0; i < staff.length;i++) {
-            newBalanceArray.push(staff[i].balance);
+        // let reducer = (accumulator, currentValue) => { return accumulator + currentValue;};
+        // for (var i=0; i < staff.length;i++) {
+        //     newBalanceArray.push(staff[i].balance);
+        // }
+        // return newBalanceArray.reduce(reducer);
+        for (let element of staff) {
+            newBalanceArray.push(element.balance);
         }
-        return newBalanceArray.reduce(reducer);
+        let totalBal = newBalanceArray.reduce((total,num) => {
+            return total + num;
+        });
+        return totalBal;
+
     },
 
     averageOfBalance: (staff) => {
-        //return "";
+ 
         let averageBalance=0;
         let totalBalance=0;
         let reducer = (accumulator, currentValue) => { return accumulator + currentValue;};
@@ -28,7 +52,7 @@ const functions = {
 
     // daily exercise Oct-25-2019
     loopStaffForEach: (staff) => {
-        // return 'a';
+
         let arrstaff=[];
         let emailInput;
         staff.forEach(function(getFromInput) {
@@ -39,14 +63,7 @@ const functions = {
        
     },    
     loopStaffMap: (staff) => {
-        //return 'a';
-        // let arrstaff=[];
-        // let emailInput;
-        // staff.forEach(function(getFromInput) {
-        //     arrstaff.push(functions.makeEmailObj(getFromInput));
-        //     emailInput=arrstaff;
-        // });
-        // return emailInput;
+       
         let arrStaff = staff.map(functions.makeEmailObj);
         return arrStaff;
        
@@ -56,21 +73,21 @@ const functions = {
 
     // daily exercise Oct-24-2019
     loopStaffIn: (staff) => {
-        // return 'a';
-        //let emailInput;
+        
         let arrStaff = [];
         
         let arrIndex;
+        
         for (arrIndex in staff) { 
             arrStaff.push(functions.makeEmailObj(staff[arrIndex]));
-            //emailInput=arrStaff;
+        
         } 
-        return arrStaff; //emailInput;
+        return arrStaff; 
        
     },
 
     loopStaffOf: (staff) => {
-        // return 'a';
+       
         let instanceOfArray = [];
         let newArray=[];
         for (instanceOfArray of staff) {
