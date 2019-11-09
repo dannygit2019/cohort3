@@ -1,5 +1,31 @@
 
+
+
+
 const functions = {
+    // daily Nov-8-2019 callback exercise (part 1)
+   
+    getPeople: (arrOfObject,callBackgetFullname) => {
+       
+        let retrieveFullname=[];
+        let selectABandBC = arrOfObject.filter( (people) => {
+            if (people.province ==="AB" || people.province ==="BC") {  
+                if (typeof callBackgetFullname === "function") {  
+                    retrieveFullname.push(callBackgetFullname(people)); 
+                } else {
+                    retrieveFullname = "Not a function";
+                }
+            }
+        });       
+        return retrieveFullname;
+    },
+
+    getFullNames: (obj) => {
+
+        let str = `${obj.fname} ${obj.lname}`;
+        return str;
+    },
+
     // daily Nov-06-2019 creating a new array for balances >= 1000
     balOver1000: (staff) => {
 
