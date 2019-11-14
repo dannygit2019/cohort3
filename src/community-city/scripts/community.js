@@ -29,7 +29,7 @@ const url = 'http://localhost:5000/';
             this.Population += numberInput;
         }
         moveOut(numberInput) {
-            this.Population -= numberInput;
+            return this.Population -= numberInput;
         }
         howBig() {
             if (this.Population > 100000) return "City";
@@ -45,7 +45,10 @@ const url = 'http://localhost:5000/';
         constructor() {
             this.CityList=[];  
         }
-
+        getCity(keyInput) {           
+            return this.CityList.filter(city => city.key === keyInput)[0];
+        }
+    
         whichSphere(city) {
             if (city.Latitude > 0) return "Northern Hemisphere";
             if (city.Latitude < 0) return "Southern Hemisphere";
@@ -55,16 +58,24 @@ const url = 'http://localhost:5000/';
         createCity(key, Name, Latitude, Longitude, Population) {
             const newCity = new City(key, Name, Latitude, Longitude, Population);
             this.CityList.push(newCity);
-            //await this.postData(url + 'add', this.CityList);
-            
         }
         
-        deleteCity(cityKey) {
+        deleteCity(cityKey) { 
             let newCityList = this.CityList.filter(function(value){
                 return value.key !== cityKey; 
             });
-            this.CityList = newCityList;
-            //return this.CityList;
+            this.CityList = newCityList;  
+        }
+
+        getLastKey() {
+            if (this.CityList.length > 0) {
+				let lastKey=this.CityList.sort((a, b) => b.key - a.key)[0].key;
+                console.log(this.CityList.sort((a, b) => b.key - a.key)[0].key);
+                console.log('check2');
+                //console.log(lastKey);
+                return lastKey;
+            };
+            return 0;
         }
         // getMostNorthern() {
            
@@ -88,14 +99,25 @@ const url = 'http://localhost:5000/';
             node.appendChild(newCard);
             /////functions.addButtons(newCard);
             let newDisplayName=document.createElement('p');
+            newDisplayName.hidden=true;
             newDisplayName.textContent=keyid;
             newCard.appendChild(newDisplayName);
+
+            newCard.appendChild(newLine);
 
             let newDisplayDetail=document.createElement('p');
             newDisplayDetail.setAttribute("id", "displayDetail");
             newDisplayDetail.setAttribute("class", "pdisplay");
             newDisplayDetail.textContent=detail;
             newCard.appendChild(newDisplayDetail);
+
+            newCard.appendChild(newLine);
+
+            let newDisplayHowBig=document.createElement('p');
+            newDisplayHowBig.setAttribute("id", "displayhowBig");
+            newDisplayHowBig.setAttribute("class", "pdisplay pBig");
+            newDisplayHowBig.textContent="";
+            newCard.appendChild(newDisplayHowBig);
 
             newCard.appendChild(newLine);
             
@@ -145,13 +167,13 @@ const url = 'http://localhost:5000/';
             sphere.textContent="Hemisphere";
             
             newCard.appendChild(sphere);
-
-
-
             return newCard;
-            
         },
-
+        deleteCurrentCard: (node,currentCard) => {
+        
+            currentCard.remove();
+            return node.childElementCount;
+        }
     
     };
 
