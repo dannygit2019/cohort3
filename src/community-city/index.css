@@ -1,0 +1,273 @@
+
+.bigWindow {
+    /* border: 5px solid black; */
+    display: table;
+    /* padding: 5px 35px 20px 35px; */
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-right: auto;
+   
+    margin-left: auto;
+    /* margin-top: 20px; */
+    margin-bottom: auto;
+    /* padding-left: 8px; */
+    background-color: darkkhaki;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+}
+.topBanner {
+    height:10px;
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: grey;
+}
+.b1 {
+    background-color:darkgreen;
+    height: 80px;
+    text-align: center;
+    padding: 2px 2px;
+    font-size: 30px;
+    color: darkgoldenrod;
+    font-weight: bold;
+    font-family: fantasy;
+}
+.leftSide {
+    /* border: 1px solid black; */
+    display: inline-block;
+    /* padding: 5px 35px 20px 35px; */
+    float: left;
+    text-align: center;
+    width: 375px;
+    height: 580px;
+    margin-left: 15px;
+    background-color: darkkhaki;
+  
+    /* margin-left: 2px; */
+    
+}
+
+.buttonsContainer {
+    
+    display: inline-block;
+   
+    /* background-color: rgb(125, 107, 189); */
+    width: 370px;
+    height: 50px;
+    margin: 2px 2px 2px 2px;
+    color: rgb(1, 102, 102);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.bTop1 {
+    
+    display: inline-block;
+   
+    background-color: red;
+    width: 370px;
+    height: 120px;
+    color: rgb(1, 102, 102);
+    margin-right: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.bt2 {
+    margin-left: 5px;
+    width: 410px;
+    margin-right: 2px;
+    
+}
+.btnleft {
+    width: 110px;
+    height: 40px;
+    margin: 2px 2px 2px 1px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    background-color: transparent; 
+}
+/* .btnleft {
+    width: 110px;
+    height: 50px;
+    margin: 15px 10px 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    background-color: transparent; 
+} */
+.leftdisplayarea {
+    color: darkblue;
+    font-weight: bold;
+    display: inline-block;
+    /* height: 510px; */
+    height: 510px;
+    width: 375px;
+    background-color: darkkhaki;
+    border: 1px solid black;
+    margin-right: 0px;
+
+}
+
+.pLeft {
+    height: 50px;
+    color: darkred;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: teal;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.midcreate {
+    width: 410px;
+    height: 300px;
+    margin-top: 1px;
+    text-align: center;
+}
+
+.midside {
+    background-color: darkkhaki;
+    /* width: 450px; */
+    width: 420px;
+    height: auto;
+    display: inline-block;
+    margin-left: 5px;
+    /*margin-right: 1px; */
+    text-align: center;
+}
+h1 {
+    font-size: 28px;
+   
+}
+h3 {
+    color: darkred;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.pmessage {
+    margin-bottom: 20px;
+    margin-top: 50PX;
+    color: red;
+    font-size: 17px;
+    font-weight: bolder;
+    font-style: italic;
+    
+}
+.lblcity {
+   float: left;
+   font-size: 16px;;
+   margin-left: 8px;
+   margin-top: 8px; 
+   font-weight: bolder;
+   
+   /* border: 1px solid blue; */
+   font-weight: bold;
+}
+.city {
+    float: right;
+    /* width: 250px; */
+    width: 200px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.btnCity {
+    height: 28px;
+    width: 78px;
+    margin-top: 20px;
+    margin-right: 8px;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: teal;
+}
+.btnright {
+    display: inline-block;
+    /* margin: 2px 2px 2px 2px; */
+    margin-top: 1px;
+    float: right;
+    margin-right: 4px;
+    height: 28px;
+    width: 84px;
+}
+p {
+    height: 5px;
+    margin-bottom: 0px;
+    margin-top: 1px;
+}
+.pdisplay {
+    font-size: 17px;
+    font-weight: bold;
+    /* margin-bottom: 1px;
+    margin-top: 2px; */
+    overflow-wrap: normal;
+    background-color: white;
+    color: brown;
+    height: 25px;
+    align-content: center;
+    /* justify-content: center; */
+    align-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 1px;
+}
+.pBig {
+    height: 35px;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    
+    background-color: teal;
+    
+}
+.rightshow {
+    border: 1px solid black;
+    height: 150px;
+    width: 445px;
+    margin-top: 1px;
+    color: darkblue;
+    margin-left: 2px;
+}
+.rightside {
+    width: 430px;
+    margin-left: 2px;
+    margin-right: 0px;
+}
+.rightPop {
+    width: 225px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+.selection {
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: darkred;
+}
+.lblmoving {
+    float: left;
+    
+    
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    align-content: center;
+    font-weight: bold;
+ }
+/* Right side */
+/* .rightside {
+    color: darkblue; margin-left: 0px;
+    font-weight: bold;
+    display: inline-block;
+   
+    background-color: darkkhaki;
+    border: 2px solid black;
+} */

@@ -26,7 +26,7 @@ const url = 'http://localhost:5000/';
         }
 
         moveIn(numberInput) {
-            this.Population += numberInput;
+            return this.Population += numberInput;
         }
         moveOut(numberInput) {
             return this.Population -= numberInput;
@@ -70,21 +70,32 @@ const url = 'http://localhost:5000/';
         getLastKey() {
             if (this.CityList.length > 0) {
 				let lastKey=this.CityList.sort((a, b) => b.key - a.key)[0].key;
-                console.log(this.CityList.sort((a, b) => b.key - a.key)[0].key);
-                console.log('check2');
+                //console.log(this.CityList.sort((a, b) => b.key - a.key)[0].key);
+                //console.log('check2');
                 //console.log(lastKey);
                 return lastKey;
             };
             return 0;
         }
-        // getMostNorthern() {
+        getMostNorthern() {
+            console.log(this.CityList.sort((a, b) => b.Latitude - a.Latitude)[0]);
+            return this.CityList.sort((a, b) => b.Latitude - a.Latitude)[0];
+        }
+        getMostSouthern() {
            
-        //     let highestLat = this.cityList.reduce(function(a, b) {
-        //         return Math.max(a.Latitude, b.Latitude);
-        //     });
-        //      return highestLat;
-        // }
-
+            return this.CityList.sort((a, b) => a.Latitude - b.Latitude)[0];
+        }
+        getTotalPop(listofCities) {
+            
+            // let newarray=listofCities;
+           
+           let newPopArr= listofCities.map((element) => element.Population);
+        
+            const reducer = (accumulator, currentValue) => accumulator + currentValue;
+            let totalOfBalance=newPopArr.reduce(reducer); // total balance of all
+           
+            return totalOfBalance;
+        }
         
     }
     const functions = {
@@ -129,7 +140,10 @@ const url = 'http://localhost:5000/';
             let txtModify = document.createElement("input");
             txtModify.setAttribute("type","number");
             txtModify.setAttribute("class","rightPop");
+            //txtModify.setAttribute("id",`txtmodifyPop${keyid}`);
             txtModify.setAttribute("id","txtmodifyPop");
+        
+            //console.log(`txtmodifyPop${keyid}`);
             newCard.appendChild(txtModify);
 
             

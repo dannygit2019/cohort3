@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>City Management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body bgcolor="darkkhaki">
+    <div class="bigWindow" id="wholeWindow"> <!-- to contain all DIVs of this page -->
+        <div class="topBanner"></div>
+        <div class="topBanner b1" style="background-image: url(./images/pop.png); height: 80px; width: auto;">City Management</div>
+        <div class="topBanner"></div>
+        <div class="leftSide" id="lside">   <!-- left Div to have Most Northern, Southern and Total population -->
+           
+            <!-- <div class="buttonsContainer">
+                <button class="btnleft" id="btnNorthern">Most Northern Hemis.</button>
+                <button class="btnleft" id="btnSouthern">Most Southern Hemis.</button>
+                <button class="btnleft" id="btnTotalPop">Total Populations</button>
+            </div> -->
+            <!-- <div class="buttonsContainer bTop1" style="background-image: url(./images/pop.png); height: 150px; width: 400px;">
+                
+            </div> -->
+            <div class="leftdisplayarea" id="displayarea"> <!-- display most Northern, Southern, total population -->
+                <div class="buttonsContainer">
+                    <button class="btnleft" id="btnNorthern">Most Northern Hemis.</button>
+                    <button class="btnleft" id="btnSouthern">Most Southern Hemis.</button>
+                    <button class="btnleft" id="btnTotalPop">Total Populations</button>
+                </div>
+                <p class="pLeft" id="leftmessage"></p> <!-- to display cities created -->
+            </div>
+        </div>
+        
+        <!-- ************* End of Left Side creation ************* -->
+
+        <div class="leftSide midside" id="midside">   <!-- middle Div to create cities -->
+            <!-- <div class="buttonsContainer">
+                <h1>Welcome to </h1>
+            </div> -->
+            <!-- <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/calgary.jpeg); height: 250px; width: 400px;" > -->
+            <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/calgary.jpeg); height: 250px; width: 400px;">
+                <!-- <h3>&lt;&lt;&lt;&lt; Create a New City &gt;&gt;&gt;&gt;</h3> -->
+                <h3>Create a New City</h3>
+                <label for="CityName" class="lblcity">Enter City Name: </label>
+                <input type="text" name="CityName" id="txtCityName" class="city"><br> 
+                
+                <label for="lat" class="lblcity">Enter Latitude: </label>
+                <input type="number" name="lat" id="txtLat" class="city" min=-180 max=180 placeholder=0><br>  
+                
+                <label for="longi" class="lblcity">Enter Longitude: </label>
+                <input type="number" name="longi" id="txtLongitude" class="city" min=-180 max=180 placeholder=0><br>  
+                
+                <label for="pop" class="lblcity">Enter City Population: </label> 
+                <input type="number" name="pop" id="txtPopulation" class="city" min=0 placeholder=0><br>
+                <p class="pmessage" id="pmessage"></p>
+                <button class="btnCity" id="btnClear">Clear</button>     
+                <button class="btnCity" id="btnCreate">Create</button>        
+                
+                <!-- <button class="btnCity" id="btnUpdate">Update</button> -->
+                <!-- <p class="pmessage" id="pmessage"></p> -->
+            </div>
+            <div class="leftdisplayarea midcreate" id="displayarea" style="border: none;"> <!-- display most Northern, Southern, total population -->
+                 
+               
+                <!-- <button class="btnCity" id="btnUpdate">Update</button> -->
+                <!-- <p class="pmessage" id="pmessage"></p> -->
+            </div>
+            <!-- <div class="leftdisplayarea rightshow" id="displaycities" style="visibility: hidden;"> 
+                <h3>Updating City Information</h3>
+                <p id="pPop"></p><br>
+                <label for="selectCity" class="selection">Select A City: </label>
+                <select name="selectCity" id="citySelected" class="selection">
+                    <option>Select A City</option>
+                </select> <br>
+                <label for="modifyPop" class="lblmoving">Move In/Move Out: </label>
+                <input type="number" name="modifyPop" id="txtmodifyPop" class="city rightPop"><br>
+                <button class="btnright" id="delete">Delete</button>
+                <button class="btnright" id="moveIn">Move In</button>
+                <button class="btnright" id="moveOut">Move Out</button>   
+            </div> -->
+        </div>
+            <!-- ************* End of Middle Side creation ************* -->
+        <div class="leftSide rightside" id="rightside">   
+            <!-- <div class="buttonsContainer bTop1 bt2" style="background-image: url(./images/pop.png); height: 150px; width: 425px;"> -->
+                <!-- <button class="btnleft" id="btnShow">Show Cities</button> -->
+            </div>
+            <!-- <div class="leftdisplayarea rightshow" id="displaycities"> 
+                
+                <p id="displayName">City A</p> <br>
+                <p class="pdisplay" id="displayDetail">Latitude: 50.001, Longitude: -112, Population: 1000</p><br>
+                <label for="modifyPop" class="lblcity">Move In/Move Out: </label>
+                <input type="number" name="modifyPop" id="txtmodifyPop" class="city rightPop"><br>
+                <button class="btnright" id="delete">Delete</button>
+                <button class="btnright" id="moveIn">Move In</button>
+                <button class="btnright" id="moveOut">Move Out</button>
+                
+            </div> -->
+        </div>    
+
+    </div>
+
+
+
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
