@@ -5,97 +5,70 @@ import { Community, City, functions } from './community.js'
 import { postData } from './apiSetup.js'
 import { fetchToServer } from './fetchCity.js'
 
-
-
 const url = 'http://localhost:5000/';
 let getKey;
 const newCommunity = new Community();
 let citySelected;
 let currentCity, currentCityKey;
-//let key=0;
-// let backupData=[];
-// let serverDown;
 
 document.addEventListener('DOMContentLoaded', async () => {
-	// alert(backupData);
+
 	txtCityName.focus();
+	console.log(newCommunity);
 	await fetchToServer.loadData(newCommunity);
 	let message;
 	let displaykey;
-	//console.log(a);
-	console.log(newCommunity.CityList);
-	// if (backupData.length > 0) {
-	// 	console.log("in backing up");
-	// 	fetchToServer.loadData(backupData);
-	// }
 	if (newCommunity.CityList.length < 1) {
 		alert("Sorry, We currently don't have data on the server");
 	}else {
 		alert("Data Found. The information will be displayed");
-
+		document.getElementById('rightside').style.height = "auto";
+		document.getElementById('rightside').style.backgroundImage = '';
 		for (let i=0; i < newCommunity.CityList.length ; i++) {
 			message=`City: ${newCommunity.CityList[i].Name}, `+ 
 					`Lat.: ${newCommunity.CityList[i].Latitude}, Long.: ${newCommunity.CityList[i].Longitude}, Population: ${newCommunity.CityList[i].Population}`;
 			displaykey=newCommunity.CityList[i].key;
 			functions.addCard(document.getElementById("rightside"),message, displaykey);
 		}
-		
 	}
-	
-
 });
 
 btnCreate.addEventListener("click", async function () {
 	getKey=	newCommunity.getLastKey();
-	console.log(getKey);
+
 	if (txtPopulation.value===""){
 		txtPopulation.value=0;
 	}
-	console.log(txtPopulation.value);
+
 	if (txtCityName.value !== "" && txtLat.value !=="" && txtLongitude.value !=="" && txtPopulation.value !=="") {
 		document.getElementById("pmessage").textContent="";
 		let matchName=false;
 		let data = await postData(url + 'all');
-		
-
+	
 		for (let i=0; i < newCommunity.CityList.length; i++) {
 			// if (newCommunity.CityList[i].key.Name === (txtCityName.value).toUpperCase()) {
 			if (newCommunity.CityList[i].Name === (txtCityName.value).toUpperCase()) {
-				console.log(newCommunity.CityList[i].Name);
 				matchName =true;
 				document.getElementById("pmessage").textContent = "The City you entered already existed. Please try again.";
 				txtCityName.focus();
 				return matchName;
 			}
 		}
-		// NO NEED let city={key: key, Name: txtCityName.value, Latitude: Number(txtLat.value), Longitude: Number(txtLongitude.value), Population: Number(txtPopulation.value)};
 		if (!matchName) {
-			
-			//NO NEED key++;
-			//NO NEED let city={key: key, Name: (txtCityName.value).toUpperCase(), Latitude: Number(txtLat.value), Longitude: Number(txtLongitude.value), Population: Number(txtPopulation.value)};
 			getKey++;
 			let city={key: getKey, Name: (txtCityName.value).toUpperCase(), Latitude: Number(txtLat.value), Longitude: Number(txtLongitude.value), Population: Number(txtPopulation.value)};
-			console.log("not found so creating");
-			// let data = await postData(url + 'all');
-			//console.log(data.status); NO NEED
 			data = await postData(url + 'all');
 			newCommunity.createCity(getKey, (txtCityName.value).toUpperCase(), Number(txtLat.value), Number(txtLongitude.value), Number(txtPopulation.value));
 			fetchToServer.addCity(city);
-			
 			document.getElementById("pmessage").textContent = ` The city ${(txtCityName.value).toUpperCase()} successfully created.`;
-			
 			const newCity = new City(getKey, (txtCityName.value).toUpperCase(), txtLat.value, txtLongitude.value, txtPopulation.value);
-			//NO NEED const newCity = new City(key, (txtCityName.value).toUpperCase(), txtLat.value, txtLongitude.value, txtPopulation.value);
 			let message=newCity.show();
 			functions.addCard(document.getElementById("rightside"),message, getKey);
-
-			//document.getElementById("leftmessage").innerText+="*****" + newCity.show() + '\n';
-			// let option = document.createElement("option");
-			// option.text=(txtCityName.value).toUpperCase();
-			// citySelected.add(option);
+			document.getElementById('rightside').style.height = "auto";
+			document.getElementById('rightside').style.backgroundImage = '';
 		}
 	} else {
-		document.getElementById("pmessage").textContent = "All fields must be entered.";
+		document.getElementById("pmessage").textContent = "All fields are mandatory.";
 	}
 
   });
@@ -106,13 +79,16 @@ btnCreate.addEventListener("click", async function () {
 	  txtLongitude.value="";
 	  txtPopulation.value="";
 	  txtCityName.focus();
+	  pmessage.textContent="";
   });
   displayarea1.addEventListener('click', (event) => {
 	leftmessage.textContent="";
+	document.getElementById("pmessage").textContent = "";
   });
 
   rightside.addEventListener('click', async (event) => {
 	leftmessage.textContent="";
+	document.getElementById("pmessage").textContent = "";
 	if (event.target.textContent === "How Big") { 
 		currentCity = event.toElement.parentElement;
 		currentCityKey = currentCity.children[0].textContent;
@@ -135,14 +111,17 @@ btnCreate.addEventListener("click", async function () {
 		if (popInput.value === "") {
 			popInput.value=0;
 		}
-		if (Number(popInput.value) < 0) {
-			currentCity.children[2].textContent = "Population can not be less than 0";
+		if (Number(popInput.value) <= 0) {
+			currentCity.children[2].textContent = "Population can not be less than 1";
 			popInput.value=0;
 			popInput.focus();
 		} else {
 			citySelected= newCommunity.getCity(Number(currentCityKey));
 			// let popInput=currentCity.getElementsByClassName("rightPop")[0];
 			let currentPOP=citySelected.Population;
+			
+			console.log(citySelected);
+
 			let popreturned=citySelected.moveIn(Number(popInput.value));
 			let errorMessage=await fetchToServer.updatePop(citySelected);
 			if (errorMessage==="errCaught") {
@@ -169,8 +148,8 @@ btnCreate.addEventListener("click", async function () {
 		if (popInput.value === "") {
 			popInput.value=0;
 		}
-		if (Number(popInput.value) < 0) {
-			currentCity.children[2].textContent = "Population can not be less than 0";
+		if (Number(popInput.value) <= 0) {
+			currentCity.children[2].textContent = "Population can not be less than 1";
 			popInput.value=0;
 			popInput.focus();
 		} else {
@@ -212,8 +191,14 @@ btnCreate.addEventListener("click", async function () {
 		} else {
 			alert("The request has been canceled.")
 		}
+		if (newCommunity.CityList.length < 1) {
+			document.getElementById('rightside').style.height = "250px";
+			document.getElementById('rightside').style.backgroundImage = "url('./images/leafuse.png')";
+			document.getElementById('rightside').style.backgroundRepeat = "no-repeat";
+		}
 	}
  });
+
 
  btnNorthern.addEventListener("click", function () {
 	if (newCommunity.CityList.length > 0) {

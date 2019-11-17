@@ -105,6 +105,4 @@ test('updatePop(city) updating city population on the server', async () => {
     data = await postData(url + 'all');
     expect(data.status).toEqual(200);
     expect(data[0].Population).toBe(15);
-   
 });
-

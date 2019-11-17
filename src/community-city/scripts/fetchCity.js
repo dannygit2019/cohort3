@@ -48,25 +48,24 @@ const url = 'http://localhost:5000/';
 			//return data;
 			
 		},
-		async getCityName(newCommu, nameInput) {
+		// async getCityName(newCommu, nameInput) {
             
-			let data = await postData(url + 'all');
-			console.log(data.length);
-			console.log(data);
-			//if (data.length !== 0) {
+		// 	let data = await postData(url + 'all');
+		// 	console.log(data.length);
+		// 	console.log(data);
+		// 	//if (data.length !== 0) {
 			
-			newCommu.CityList = data.map(dataCity => new City(dataCity.key, dataCity.Name, dataCity.Latitude, dataCity.Longitude, dataCity.Population));
-			if (newCommu.CityList.length > 0) {		
-				console.log("inside ")
-				let a=newCommu.CityList.filter((checkName) => checkName.Name === nameInput)[0].Name;
+		// 	newCommu.CityList = data.map(dataCity => new City(dataCity.key, dataCity.Name, dataCity.Latitude, dataCity.Longitude, dataCity.Population));
+		// 	if (newCommu.CityList.length > 0) {		
+		// 		console.log("inside ")
+		// 		let a=newCommu.CityList.filter((checkName) => checkName.Name === nameInput)[0].Name;
 				
-				//console.log(a);
-				return a;
-			}
-			return "";
-			//}
-			//return 0;
-		},
+				
+		// 		return a;
+		// 	}
+		// 	return "";
+		
+		// },
 
 
 

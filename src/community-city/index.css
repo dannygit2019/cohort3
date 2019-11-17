@@ -12,9 +12,38 @@
     /* margin-top: 20px; */
     margin-bottom: auto;
     /* padding-left: 8px; */
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
+    background-color: rgb(1, 94, 94);
     /* padding-left: 10px;
     padding-right: 10px; */
+}
+.inside {
+    /* background-color: teal; */
+    background-color: white;
+    opacity: 0.8;
+    height: 60px;
+    width: 600px;
+    /* color: rgb(231, 231, 5); */
+    color: rgb(2, 2, 124);
+    font-size: 36px;
+    text-align: center;
+    font-weight:bolder;
+    margin-top: 1px;
+    margin-bottom: 3px;
+    padding-top: 11px;
+    margin-left: 28%;
+}
+.topic {
+    color: rgb(216, 216, 4);
+    
+    font-weight: bolder;
+    text-align: center;
+    width: 300px;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 2px;
+    margin-left: 45px;
+    
 }
 .topBanner {
     height:10px;
@@ -26,11 +55,12 @@
 .b1 {
     background-color:darkgreen;
     height: 80px;
+    
     text-align: center;
-    padding: 2px 2px;
+    padding-top: 10px;
     font-size: 30px;
-    color: darkgoldenrod;
-    font-weight: bold;
+    color: rgb(255, 17, 0);
+    font-weight: bolder;
     font-family: fantasy;
 }
 .leftSide {
@@ -40,13 +70,17 @@
     float: left;
     text-align: center;
     width: 375px;
-    height: 580px;
-    margin-left: 15px;
-    background-color: darkkhaki;
+    /* height: 580px; */
+    height: auto;
+    margin-left: 10px;
+    margin-top: 2px;
+    /* background-color: darkkhaki; */
+    background-color: rgb(1, 94, 94);
   
     /* margin-left: 2px; */
     
 }
+
 
 .buttonsContainer {
     
@@ -54,6 +88,7 @@
    
     /* background-color: rgb(125, 107, 189); */
     width: 370px;
+    
     height: 50px;
     margin: 2px 2px 2px 2px;
     color: rgb(1, 102, 102);
@@ -75,6 +110,7 @@
 .bt2 {
     margin-left: 5px;
     width: 410px;
+
     margin-right: 2px;
     
 }
@@ -85,6 +121,8 @@
     text-align: center;
     font-weight: bold;
     display: inline-block;
+    color: white;
+
     background-color: transparent; 
 }
 /* .btnleft {
@@ -100,22 +138,30 @@
     color: darkblue;
     font-weight: bold;
     display: inline-block;
-    /* height: 510px; */
+    
     height: 510px;
+    height: 250px;
     width: 375px;
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
+    background-color: rgb(1, 94, 94);
     border: 1px solid black;
+    margin-top: 2px;
     margin-right: 0px;
 
 }
-
+/* .lcover {
+    width: 345px;
+    height: 250px;
+    
+    border: 1px solid black;
+} */
 .pLeft {
     height: 50px;
-    color: darkred;
+    color: yellow;
     font-size: 20px;
     font-weight: bold;
     background-color: teal;
-    margin-top: 15px;
+    margin-top: 50px;
     padding-top: 15px;
 }
 .midcreate {
@@ -126,7 +172,8 @@
 }
 
 .midside {
-    background-color: darkkhaki;
+    /* background-color: darkkhaki; */
+    background-color: rgb(1, 94, 94);
     /* width: 450px; */
     width: 420px;
     height: auto;
@@ -148,7 +195,7 @@ h3 {
 }
 .pmessage {
     margin-bottom: 20px;
-    margin-top: 50PX;
+    margin-top: 40PX;
     color: red;
     font-size: 17px;
     font-weight: bolder;
@@ -202,6 +249,7 @@ p {
     font-weight: bold;
     /* margin-bottom: 1px;
     margin-top: 2px; */
+    
     overflow-wrap: normal;
     background-color: white;
     color: brown;
@@ -212,28 +260,33 @@ p {
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 0px;
-    margin-top: 0px;
+    margin-top: 2px;
     padding-top: 1px;
 }
 .pBig {
     height: 35px;
     justify-content: center;
-    font-size: 14px;
-    color: white;
+    font-size: 16px;
+    color: yellow;
     
     background-color: teal;
     
 }
 .rightshow {
-    border: 1px solid black;
-    height: 150px;
+    border: 0.5px solid black;
+    height: 152px;
     width: 445px;
-    margin-top: 1px;
+    margin-top: 0px;
     color: darkblue;
-    margin-left: 2px;
+    margin-left: 0px;
+    margin-bottom: 0px;
 }
 .rightside {
-    width: 430px;
+    /* width: 430px; */
+    width: 445px;
+    height: 250px;
+    border: 0.5px solid black;
+    /* height: 250px; */
     margin-left: 2px;
     margin-right: 0px;
 }
@@ -260,8 +313,10 @@ p {
     margin-bottom: 15px;
     margin-left: 20px;
     align-content: center;
+    color: white;
     font-weight: bold;
  }
+
 /* Right side */
 /* .rightside {
     color: darkblue; margin-left: 0px;

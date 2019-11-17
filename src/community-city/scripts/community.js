@@ -37,7 +37,7 @@ const url = 'http://localhost:5000/';
             if (this.Population >= 1000) return "Town";
             if (this.Population > 100) return "Village";
             if (this.Population >= 1) return "Hamlet";
-            return "Unknown-Danny's Land";
+            return "Unknown-Danny's Land?";
         }
         
     }
@@ -78,7 +78,7 @@ const url = 'http://localhost:5000/';
             return 0;
         }
         getMostNorthern() {
-            console.log(this.CityList.sort((a, b) => b.Latitude - a.Latitude)[0]);
+            //console.log(this.CityList.sort((a, b) => b.Latitude - a.Latitude)[0]);
             return this.CityList.sort((a, b) => b.Latitude - a.Latitude)[0];
         }
         getMostSouthern() {
@@ -104,6 +104,8 @@ const url = 'http://localhost:5000/';
             let newLine=document.createElement("br");
             let newCard=document.createElement("div");
             newCard.setAttribute("class", "rightshow");
+            newCard.setAttribute("id", "rightside");
+
             // newCard.textContent=`City ${node.childElementCount}`;
             //newCard.textContent=`City ${cName}`;
             

@@ -29,7 +29,7 @@ test('testing method howBig() of class City', () => {
     expect(halifax.howBig()).toBe("Town");
     expect(sydney.howBig()).toBe("Village");
     expect(regina.howBig()).toBe("Hamlet");
-    expect(newerCity.howBig()).toBe("Unknown-Danny's Land");
+    expect(newerCity.howBig()).toBe("Unknown-Danny's Land?");
 });
 // ***** TESING COMMUNITY CLASS ************
 
@@ -44,6 +44,7 @@ test('testing method whichSphere(city) of class COMMUNITY', () => {
 
 test('testing methods createCity(), deleteCity() of class COMMUNITY', () => {
     const newCommunity = new Community();
+    expect(newCommunity.getLastKey()).toEqual(0);
     newCommunity.createCity(8,"QUEBEC",53.55014,-113.46871,111);
     
     expect(newCommunity.CityList).toEqual([{"key": 8, "Name": "QUEBEC", "Latitude": 53.55014, "Longitude": -113.46871, "Population": 111}]);
@@ -88,4 +89,26 @@ test('testing add and delete cards', () => {
     expect(functions.addCard(newParent).childElementCount).toEqual(11);
     expect(functions.deleteCurrentCard(newParent, newCard)).toEqual(1);
     // expect(functions.deleteCurrentCard(newParent, newCard)).toEqual(5);
+});
+
+// 130E EXERCISE - OBJECT REFERENCE
+test('testing object-reference', async () => {
+
+
+    const newCommunity = new Community();
+    newCommunity.createCity(1, "myCity", 53.09, -112.69, 90);
+    let myFav=newCommunity;
+
+    expect(newCommunity.CityList[0].Population).toEqual(90);
+    expect(myFav.CityList[0].Population).toEqual(90);
+
+    myFav.CityList[0].moveIn(10);
+    expect(newCommunity.CityList[0].Population).toEqual(100);
+    expect(myFav.CityList[0].Population).toEqual(100);
+
+    newCommunity.CityList[0].moveOut(5);
+
+    expect(newCommunity.CityList[0].Population).toEqual(95);
+    expect(myFav.CityList[0].Population).toEqual(95);
+
 });

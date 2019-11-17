@@ -10,9 +10,15 @@
 <body bgcolor="darkkhaki">
     <div class="bigWindow" id="wholeWindow"> <!-- to contain all DIVs of this page -->
         <div class="topBanner"></div>
-        <div class="topBanner b1" style="background-image: url(./images/pop.png); height: 80px; width: auto;">City Management</div>
+        <div class="topBanner b1" style="background-image: url(./images/pop.png); height: 80px; width: auto;">
+            <div class="inside"> CITY MANAGEMENT
+                <!-- <div style="background-color: transparent; color: darkblue; opacity: 1;">
+                    <p>CITY MANAGEMENT</p>
+                </div> -->
+            </div>
+        </div>
         <div class="topBanner"></div>
-        <div class="leftSide" id="lside">   <!-- left Div to have Most Northern, Southern and Total population -->
+        <div class="leftSide lcover" id="lside">   <!-- left Div to have Most Northern, Southern and Total population -->
            
             <!-- <div class="buttonsContainer">
                 <button class="btnleft" id="btnNorthern">Most Northern Hemis.</button>
@@ -39,28 +45,30 @@
                 <h1>Welcome to </h1>
             </div> -->
             <!-- <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/calgary.jpeg); height: 250px; width: 400px;" > -->
-            <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/calgary.jpeg); height: 250px; width: 400px;">
-                <!-- <h3>&lt;&lt;&lt;&lt; Create a New City &gt;&gt;&gt;&gt;</h3> -->
-                <h3>Create a New City</h3>
-                <label for="CityName" class="lblcity">Enter City Name: </label>
+            <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/newimage.jpg); height: 250px; width: 400px;">
+                <!-- <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/picture1.png); height: 250px; width: 400px;"> -->
+                
+                <h3>&lt;&lt;&lt;&lt; Create a New City &gt;&gt;&gt;&gt;</h3>
+                <!-- <h3>Create a New City</h3> -->
+                <label for="CityName" class="lblcity">Enter City Name *: </label>
                 <input type="text" name="CityName" id="txtCityName" class="city"><br> 
                 
-                <label for="lat" class="lblcity">Enter Latitude: </label>
-                <input type="number" name="lat" id="txtLat" class="city" min=-180 max=180 placeholder=0><br>  
+                <label for="lat" class="lblcity">Enter Latitude *: </label>
+                <input type="number" name="lat" id="txtLat" class="city" min=-180 max=180><br>  
                 
-                <label for="longi" class="lblcity">Enter Longitude: </label>
-                <input type="number" name="longi" id="txtLongitude" class="city" min=-180 max=180 placeholder=0><br>  
+                <label for="longi" class="lblcity">Enter Longitude *: </label>
+                <input type="number" name="longi" id="txtLongitude" class="city" min=-180 max=180><br>  
                 
-                <label for="pop" class="lblcity">Enter City Population: </label> 
-                <input type="number" name="pop" id="txtPopulation" class="city" min=0 placeholder=0><br>
+                <label for="pop" class="lblcity">Enter City Population *: </label> 
+                <input type="number" name="pop" id="txtPopulation" class="city" min=0><br>
                 <p class="pmessage" id="pmessage"></p>
                 <button class="btnCity" id="btnClear">Clear</button>     
                 <button class="btnCity" id="btnCreate">Create</button>        
                 
                 <!-- <button class="btnCity" id="btnUpdate">Update</button> -->
-                <!-- <p class="pmessage" id="pmessage"></p> -->
+                <p class="pmessage" id="pmessage1">(*) Mandatory fields</p><br>
             </div>
-            <div class="leftdisplayarea midcreate" id="displayarea" style="border: none;"> <!-- display most Northern, Southern, total population -->
+            <div class="leftdisplayarea midcreate" id="displayarea" style="border: none;">
                  
                
                 <!-- <button class="btnCity" id="btnUpdate">Update</button> -->
@@ -81,7 +89,7 @@
             </div> -->
         </div>
             <!-- ************* End of Middle Side creation ************* -->
-        <div class="leftSide rightside" id="rightside">   
+        <div class="leftSide rightside" id="rightside" style="background-image: url(./images/leafuse.png); background-repeat: no-repeat; height: 250px; width: 445px;">   
             <!-- <div class="buttonsContainer bTop1 bt2" style="background-image: url(./images/pop.png); height: 150px; width: 425px;"> -->
                 <!-- <button class="btnleft" id="btnShow">Show Cities</button> -->
             </div>
