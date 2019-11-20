@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* my images */
+
+.imagesClass {
+  background-color: teal;
+  border: none;
+  height: 120px;
+  padding-top: 20px;
+}
+.modify:hover {
+  
+  /* background-color: lightblue; */
+  filter: grayscale(10%);
+  /* outline: 0px; */
+  border: 0px;
+  cursor: progress;
+  
+}
+.modify:focus {
+  /* border: 5px solid lightsalmon; */
+  filter: grayscale(0%);
+  outline: 0px;
+}
+
+.modify {
+  margin-right: 70px;
+  filter: grayscale(100%);
+  border: 0px;
+}
+@keyframes android-spin {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+.iandroid {
+  animation: android-spin infinite 10s linear; 
+  outline-color: limegreen;
+  
+}
+.Pdisplay {
+  color: blue;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@keyframes money-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); }
+}
+.imoney {
+  animation: money-spin infinite 25s linear;
+}
+@keyframes love-spin {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(10deg); }
+}
+.ilove {
+  animation: love-spin infinite 15s linear;
+}
+
