@@ -3,27 +3,50 @@
 
 
 const functions = {
+    // Daily Nov-21-2019
+    getTotalfromPart1: (dataInput) => {
+        let newObj={totalOfPeople: 0, totalAge: 0, AverageAge: 0};
+        let newAgeArray=[];
+        let callBack= tempArray => {return tempArray};
+        let newPeople = functions.getPeople(dataInput,callBack);
+        newObj.totalOfPeople = newPeople.length;
+        for (let element of newPeople) {
+            newAgeArray.push(element.age);
+        }
+        newObj.totalAge = newAgeArray.reduce((total,num) => {
+            return total + num;
+        });
+        newObj.AverageAge = Math.round(newObj.totalAge / newObj.totalOfPeople);
+        
+        return newObj;
+    },
+
+
     // daily Nov-8-2019 callback exercise (part 1)
    
     getPeople: (arrOfObject,callBackgetFullname) => {
        
         let retrieveFullname=[];
+        
         let selectABandBC = arrOfObject.filter( (people) => {
             if (people.province ==="AB" || people.province ==="BC") {  
                 if (typeof callBackgetFullname === "function") {  
+                   
                     retrieveFullname.push(callBackgetFullname(people)); 
                 } else {
-                    retrieveFullname = "Not a function";
+                   retrieveFullname = "Not a function";
                 }
             }
         });       
+ 
+        //console.log(retrieveFullname);
         return retrieveFullname;
     },
 
     getFullNames: (obj) => {
-
-        let str = `${obj.fname} ${obj.lname}`;
-        return str;
+        return `${obj.fname} ${obj.lname}`;
+        // let str = `${obj.fname} ${obj.lname}`;
+        // return str;
     },
 
     // daily Nov-06-2019 creating a new array for balances >= 1000

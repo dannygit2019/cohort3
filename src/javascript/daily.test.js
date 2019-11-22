@@ -60,7 +60,14 @@ const people = [
     {fname:"Darrell", lname:"Koch", province:"SK", age:10},
     {fname:"Tylor", lname:"Torres", province:"MN", age:98}
 ];
+// daily Nov-21-2019
 
+test('testing totalPeople of AB and BC', () => {
+    //expect(functions.getTotalfromPart1(people)).toEqual(22) // testing total of peole
+    // expect(functions.getTotalfromPart1(people)).toEqual(838) // testing total age
+    // expect(functions.getTotalfromPart1(people)).toEqual(38) // testing average age
+    expect(functions.getTotalfromPart1(people)).toEqual({totalOfPeople: 22,totalAge: 838,AverageAge: 38});
+});
 
 
 // daily exercise Nov-8-2019
