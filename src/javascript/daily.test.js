@@ -1,4 +1,4 @@
-import functions from './daily'
+import {functions} from './daily'
 const data = {
     staff: [
         { fname: "Jane", lname: "Smith", balance: 10 },
@@ -60,6 +60,29 @@ const people = [
     {fname:"Darrell", lname:"Koch", province:"SK", age:10},
     {fname:"Tylor", lname:"Torres", province:"MN", age:98}
 ];
+// daily Nov-22-2019
+let myArray = [
+    {num: 5,str: "apples", origin:"BC"},
+    {num: 7,str: "oranges", origin:"Florida"},
+    {num: 2,str: "lemons", origin:"Mexico"},
+    {num: 8,str: "bananas", origin:"Ecuador"},
+    {num: 6,str: "avocados", origin:"Mexico"},
+    {num: 4,str: "pineapple", origin:"Brazil"},
+    {num: 3,str: "blueberries", origin:"Chile"},
+    {num: 9,str: "pears", origin:"Oregon"},
+    {num: 1,str: "cantaloupe", origin:"California"}
+];
+
+test('testing sorting - anonymousNumber', () => {
+    functions.anonymousNumber(myArray);
+});
+test('testing sorting - namedFunction', () => {
+    functions.namedFunction(myArray);
+});
+test('testing sorting - arrowFunction', () => {
+    functions.arrowFunction(myArray);
+});
+
 // daily Nov-21-2019
 
 test('testing totalPeople of AB and BC', () => {

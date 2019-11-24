@@ -1,8 +1,50 @@
-
-
-
+let myArray = [
+    {num: 5,str: "apples", origin:"BC"},
+    {num: 7,str: "oranges", origin:"Florida"},
+    {num: 2,str: "lemons", origin:"Mexico"},
+    {num: 8,str: "bananas", origin:"Ecuador"},
+    {num: 6,str: "avocados", origin:"Mexico"},
+    {num: 4,str: "pineapple", origin:"Brazil"},
+    {num: 3,str: "blueberries", origin:"Chile"},
+    {num: 9,str: "pears", origin:"Oregon"},
+    {num: 1,str: "cantaloupe", origin:"California"}
+];
 
 const functions = {
+    // Daily Nov-22-2019
+    anonymousNumber: (myArray) => {
+        myArray.sort(function(a,b) {
+            return a.num - b.num;
+        });
+        console.log("myArray = ", myArray);
+    },
+
+    namedFunction: (myArray) => {
+        myArray.sort(function fruitAlphabetic(a,b) {
+            if (a.str > b.str) {
+                return 1;
+            } else if (a.str < b.str) {
+                return -1;
+            } else {
+                return 0;
+            }
+        })
+        console.log("myArray = ", myArray);
+    },
+
+    arrowFunction: (myArray) => {
+        myArray.sort((a,b) => {
+            if (a.origin < b.origin) {
+                return 1;
+            } else if (a.origin > b.origin) {
+                return -1;
+            } else {
+                return 0;
+            }
+        });
+        console.log("myArray = ", myArray);    
+    },
+
     // Daily Nov-21-2019
     getTotalfromPart1: (dataInput) => {
         let newObj={totalOfPeople: 0, totalAge: 0, AverageAge: 0};
@@ -332,4 +374,5 @@ const functions = {
 // DO NOT delete lines below
 };
 
-export default functions;
+//export default functions;
+export {functions};
