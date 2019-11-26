@@ -15,14 +15,10 @@ class App extends Component {
     }
   }
   onPushMe= () => {
-    console.log("You pushed me");
     this.counter=this.counter + 1;
-    console.log(this.counter);
     this.setState({
       myState: "Now:" + this.counter,
       display: this.numberFilter(this.counter)
-     
-      
     });
    
 
