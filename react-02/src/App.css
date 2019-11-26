@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.AppTTT {
+  background-color: teal;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
@@ -13,7 +17,10 @@
   padding: 20px;
   color: white;
 }
-
+.headerTTT{
+  background-color:rgb(2, 2, 119);
+  
+}
 .App-intro {
   font-size: large;
 }
@@ -29,6 +36,7 @@
   background-color: teal;
   border: none;
   height: 120px;
+  
   padding-top: 20px;
 }
 .modify:hover {
@@ -37,13 +45,15 @@
   filter: grayscale(10%);
   /* outline: 0px; */
   border: 0px;
-  cursor: progress;
-  
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 5px yellow);
 }
 .modify:focus {
   /* border: 5px solid lightsalmon; */
-  filter: grayscale(0%);
+  filter: grayscale(20%);
   outline: 0px;
+  background-color: transparent;
+  filter: drop-shadow(5px 5px 5px yellow);
 }
 
 .modify {
@@ -57,9 +67,17 @@
 }
 .iandroid {
   animation: android-spin infinite 10s linear; 
-  outline-color: limegreen;
+  /* filter: drop-shadow(5px 5px 5px yellow); */
+  /* background-color: teal; */
+  /* filter: grayscale(100%); */
+  /* background-color: wheat; */
   
 }
+.iandroid:focus {
+  filter: grayscale(20%);
+  filter: drop-shadow(5px 5px 5px yellow);
+}
+
 .Pdisplay {
   color: blue;
   font-size: 20px;
@@ -81,3 +99,61 @@
   animation: love-spin infinite 15s linear;
 }
 
+/* working on TicTacToe Game */
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+  
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 34px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  margin-left: 45%;
+}
+
+.game-info {
+  margin-left: 20px;
+}
