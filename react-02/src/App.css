@@ -1,20 +1,41 @@
 .App {
   text-align: center;
+  height: 50px;
 }
 
 .AppTTT {
   background-color: teal;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+  
+  color: rgb(236, 236, 2);
 }
-
+/* .h22 {
+  padding-top: 7px;
+  height: 10px;
+  
+} */
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
-
+/* h2 in Account.js */
+.h22 {
+  height: 50px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+  background-color: teal;
+  color: rgb(206, 206, 5);
+  font-size: 32px;
+  font-weight: bold;
+}
 .App-header {
   background-color: #222;
   height: 150px;
-  padding: 20px;
+  /* padding: 20px; */
   color: white;
 }
 .headerTTT{
@@ -35,21 +56,21 @@
 .imagesClass {
   background-color: teal;
   border: none;
-  height: 120px;
+  height: 75px;
   
   padding-top: 20px;
 }
 .modify:hover {
   
-  /* background-color: lightblue; */
+
   filter: grayscale(10%);
-  /* outline: 0px; */
+
   border: 0px;
   cursor: pointer;
   filter: drop-shadow(5px 5px 5px yellow);
 }
 .modify:focus {
-  /* border: 5px solid lightsalmon; */
+  
   filter: grayscale(20%);
   outline: 0px;
   background-color: transparent;
@@ -60,23 +81,21 @@
   margin-right: 70px;
   filter: grayscale(100%);
   border: 0px;
+  height: 60px;
 }
-@keyframes android-spin {
+@keyframes react-spin {
   from { transform: rotate(360deg); }
   to { transform: rotate(0deg); }
 }
-.iandroid {
-  animation: android-spin infinite 10s linear; 
-  /* filter: drop-shadow(5px 5px 5px yellow); */
-  /* background-color: teal; */
-  /* filter: grayscale(100%); */
-  /* background-color: wheat; */
+.ireact {
+  animation: react-spin infinite 20s linear; 
+
   
 }
-.iandroid:focus {
+/* .iandroid:focus {
   filter: grayscale(20%);
   filter: drop-shadow(5px 5px 5px yellow);
-}
+} */
 
 .Pdisplay {
   color: blue;
@@ -84,19 +103,19 @@
   font-weight: bold;
 }
 
-@keyframes money-spin {
+@keyframes tictactoe-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(180deg); }
 }
-.imoney {
-  animation: money-spin infinite 25s linear;
+.itictactoe {
+  animation: tictactoe-spin infinite 5s linear;
 }
-@keyframes love-spin {
+@keyframes bank-spin {
   from { transform: rotate(360deg); }
   to { transform: rotate(10deg); }
 }
-.ilove {
-  animation: love-spin infinite 15s linear;
+.ibank {
+  animation: bank-spin infinite 15s linear;
 }
 
 /* working on TicTacToe Game */
