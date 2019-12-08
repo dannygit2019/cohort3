@@ -138,8 +138,8 @@
     font-weight: bold;
     display: inline-block;
     
-    /* height: 510px; */
-    height: 250px;
+    /* height: 120px; */
+    height: 246px;
     width: 373px;
     /* background-color: darkkhaki; */
     background-color: rgb(1, 94, 94);
@@ -148,39 +148,58 @@
     margin-right: 0px;
 
 
+
 }
-/* .lcover {
-    width: 345px;
-    height: 250px;
+
+.light {
+    background-color: white;
+    /* margin-left: 50%; */
+    margin-top: 30px;
+    font-weight: bold;
+    /* width: 500px; */
     
-    border: 1px solid black;
-} */
+   
+}
+
+.mixed-chart {
+    margin-left: 20%;
+    font-weight: bold;
+    color: black;
+    /* width: 500px; */
+
+}
+
+
+.lcover {
+   margin-left: 10px;
+}
 .pLeft {
     height: 50px;
     color: yellow;
     font-size: 20px;
     font-weight: bold;
     background-color: teal;
-    margin-top: 50px;
+    /* margin-top: 50px; */
     padding-top: 15px;
 }
 .midcreate {
     width: 420px;
     /* height: 300px; */
     margin-top: 1px;
- 
+    border: 0px;
     text-align: center;
 }
 
 .midside {
     /* background-color: darkkhaki; */
     background-color: rgb(1, 94, 94);
+    /* border: 1px solid black; */
     /* width: 450px; */
     width: 410px;
     height: auto;
     display: inline-block;
-    margin-left: 20px;
-    margin-right: 16px;
+    margin-left: 12px;
+    margin-right: 12px;
     
     /*margin-right: 1px; */
     text-align: center;
@@ -207,12 +226,25 @@ h3 {
     font-style: italic;
     
 }
+.forCreateAccount {
+    margin-bottom: 20px;
+    margin-top: 20PX;
+    
+    height: 50px;
+    color: red;
+    font-size: 17px;
+    font-weight: bolder;
+    font-style: italic;
+}
 .lblAcct {
    float: left;
-   font-size: 16px;;
+   font-size: 16px;
    margin-left: 8px;
-   margin-top: 8px; 
+   margin-top: 5px; 
+   
    font-weight: bolder;
+   width: 380px;
+   
    
    /* border: 1px solid blue; */
    font-weight: bold;
@@ -221,15 +253,26 @@ h3 {
     float: right;
     /* width: 250px; */
     width: 200px;
-    margin-right: 8px;
-    margin-top: 5px;
+    margin-right: 8px; 
+    margin-top: 2px;
 }
 
 .btnAcct {
     height: 28px;
     width: 78px;
     margin-top: 20px;
-    margin-right: 8px;
+    margin-right: 20px;
+    
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: teal;
+}
+.btnDetail {
+    height: 28px;
+    width: 78px;
+    margin-top: 5px;
+    margin-right: 5px;
     float: right;
     font-size: 15px;
     font-weight: bold;
@@ -287,32 +330,46 @@ p {
     
 }
 .rightshow {
-    /* border: 0.5px solid black; */
-    height:190px;
+    border: 0.5px solid white;
+    height:120px;
+    /* height:218px; */
     width: 450px;
-    margin-top: 0px;
-    color: darkblue;
-    margin-left: 1px;
-    margin-right: 0px;
-    margin-bottom: 0px;
 
+    color: darkblue;
+    margin-left: 5px;
+    margin-right: 1px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    /* background-color: rgb(1, 66, 66); */
+
+}
+.titleCreated {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    height: 15px;
+    margin: 2px 0px 10px 0px;
 }
 .rightside {
     /* width: 445px; */
-    width: 450px;
+    width: 456px;
     height: 250px;
     border: 0.5px solid black;
     /* height: 250px; */
     margin-left: 0px;
     margin-right: 0px;
+    
+    background-color: rgb(1, 94, 94);
 
 }
 .rightPop {
-    width: 225px;
+    /* width: 225px; */
+    width: 150px;
     float: right;
     margin-right: 4px;
-    margin-top: 10px;
-    margin-bottom: 15px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    margin-left: 67px;
 }
 .selection {
     height: 30px;
@@ -326,9 +383,9 @@ p {
     float: left;
     
     
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 15px;
     align-content: center;
     color: white;
     font-weight: bold;

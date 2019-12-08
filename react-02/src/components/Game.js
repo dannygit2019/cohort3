@@ -1,4 +1,6 @@
 import React from 'react';
+// import tictactoe from '../images/tictactoe.svg';
+// import '../App.css';
 
 function Square (props) {
   
@@ -51,7 +53,7 @@ class Board extends React.Component {
 class Game extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state ={
       history: [{
         squares: Array(9).fill(null),
       }],
@@ -111,7 +113,9 @@ class Game extends React.Component {
           
 
         <div className="game">
+
           <div className="game-board">
+
             <Board
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}

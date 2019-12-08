@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bank Management</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body bgcolor="darkkhaki">
+    <div class="bigWindow" id="wholeWindow"> <!-- to contain all DIVs of this page -->
+        <div class="topBanner"></div>
+        <div class="topBanner b1" style="background-image: url(./images/pop.png); height: 80px; width: auto;">
+            <div class="inside"> Welcome to DT Bank
+                <!-- <div style="background-color: transparent; color: darkblue; opacity: 1;">
+                    <p>DT BANK</p>
+                </div> -->
+            </div>
+        </div>
+        <div class="topBanner"></div>
+        <div class="leftSide lcover" id="lside">
+            <div class="leftdisplayarea" id="displayarea">
+                <div class="buttonsContainer">
+                    <button class="btnleft" id="btnTotal">Total Balance</button>
+                    <button class="btnleft" id="btnHighest">Highest Acct.</button>
+                    <button class="btnleft" id="btnLowest">Lowest Acct.</button>
+                </div>
+                <p class="pLeft" id="leftmessage"></p>
+            </div>
+        </div>
+        
+        <!-- ************* End of Left Side creation ************* -->
+
+        <div class="leftSide midside" id="midside">   <!-- middle Div to create cities -->
+
+            <div class="leftdisplayarea midcreate" id="displayarea1" style="background-image: url(./images/money.png); height: 250px; width: 400px;">
+                <h3>&lt;&lt;&lt;&lt; Create a New Account &gt;&gt;&gt;&gt;</h3>                
+                <label for="AcctName" class="lblAcct">Enter Account Name: </label>
+                <input type="text" name="AcctName" id="txtAcctName" class="acct"><br> 
+                <label for="initBal" class="lblAcct">Enter Initial Balance: </label>
+                <input type="number" name="initBal" id="txtInitBal" class="acct" ><br>  
+                <p class="pmessage" id="pmessage1"></p>
+                <button class="btnAcct" id="btnClear">Clear</button>     
+                <button class="btnAcct" id="btnCreate">Create</button>        
+            </div>
+            <div class="leftdisplayarea midcreate" id="displayarea" style="border: none;">
+                <!-- <button class="btnCity" id="btnUpdate">Update</button> -->
+                <p class="pmessage" id="pmessage">sfsdfsdf</p>
+            </div>
+            
+        </div>
+            <!-- ************* End of Middle Side creation ************* -->
+        <div class="leftSide rightside" id="rightside" style="background-image: url(./images/newimage.jpg); background-repeat: no-repeat; height: 250px; width: 445px;">   
+            
+        </div>
+            <!-- <div class="leftdisplayarea rightshow" id="displaycities"> 
+                <p id="displayName">City A</p> <br>
+                <p class="pdisplay" id="displayDetail">Latitude: 50.001, Longitude: -112, Population: 1000</p><br>
+                <label for="modifyPop" class="lblcity">Move In/Move Out: </label>
+                <input type="number" name="modifyPop" id="txtmodifyPop" class="city rightPop"><br>
+                <button class="btnright" id="delete">Delete</button>
+                <button class="btnright" id="moveIn">Move In</button>
+                <button class="btnright" id="moveOut">Move Out</button>
+            </div> -->
+        </div>    
+
+    </div>
+
+
+
+    <script type="module" src="./scripts/index.js"></script>
+</body>
+</html>
