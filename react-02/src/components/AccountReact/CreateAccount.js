@@ -12,6 +12,7 @@ class AccountPage extends Component {
 		super(props);
 		this.newAccController = new AccountController();
 		this.state = {
+			accSummary:"",
 			listForChart: [],
 			hideThreeDiv: false,
 			hideChart: true,
@@ -186,7 +187,7 @@ class AccountPage extends Component {
 			<div className="bigWindow">
 				<div className="App" >
 					<h2 className="h22"><span className="spanshadow">Welcome to DT Bank</span></h2>
-					<div className="marquee"><p>Developed By Danny Tran - Learner @ EvolveU - GREAT Team</p></div>
+					<div className="marquee"><p>Developed By Danny Tran - Learner @ EvolveU - GREAT TEAM!</p></div>
 				</div>
 				{/* <div hidden={this.state.hideChart}><BarChart exit={this.exitChart} array={this.newAccController.accountHolder} /></div> */}
 				<div hidden={this.state.hideChart}><BarChart toHide={this.exitChart} array={this.state.listForChart} /></div>

@@ -33,7 +33,6 @@ class BarChart extends Component {
     const options = {
       chart: {
         id: "basic-bar",
-        
       },
       title: {
         text: "ACCOUNTS SUMMARY BY HIGHEST BALANCE",
@@ -56,11 +55,10 @@ class BarChart extends Component {
           hideOverlappingLabels: true,
           trim: true,
           style: {
-              
               colors: "darkblue",
               fontSize: '15px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              cssClass: 'apexcharts-xaxis-label',
+              //fontFamily: 'Helvetica, Arial, sans-serif',
+              //cssClass: 'apexcharts-xaxis-label',
           },
           offsetX: 0,
           offsetY: 0,
@@ -72,8 +70,8 @@ class BarChart extends Component {
           style: {
             color: "red",
             fontSize: '12px',
-            fontFamily: 'Helvetica, Arial, sans-serif',
-            cssClass: 'apexcharts-xaxis-title',
+            //fontFamily: 'Helvetica, Arial, sans-serif',
+            //cssClass: 'apexcharts-xaxis-title',
           },
         },
 
@@ -87,8 +85,8 @@ class BarChart extends Component {
           style: {
             color: "red",
             fontSize: '12px',
-            fontFamily: 'Helvetica, Arial, sans-serif',
-            cssClass: 'apexcharts-yaxis-title',
+            //fontFamily: 'Helvetica, Arial, sans-serif',
+            //cssClass: 'apexcharts-yaxis-title',
           },
         },
         labels: {
@@ -102,8 +100,8 @@ class BarChart extends Component {
               
               color: "darkblue",
               fontSize: '15px',
-              fontFamily: 'Helvetica, Arial, sans-serif',
-              cssClass: 'apexcharts-xaxis-label',
+              //fontFamily: 'Helvetica, Arial, sans-serif',
+              //cssClass: 'apexcharts-xaxis-label',
           },
           offsetX: 0,
           offsetY: 0,
@@ -120,7 +118,7 @@ class BarChart extends Component {
     return (
       // <div className="app" hidden={this.state.hideThisChart}>
       <div className="app" hidden={this.state.hideThisChart}>
-        <div><input style={{marginRight: "240px"}} type="submit" value="HIDE" className="btnAcct" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
+        <div><input style={{marginRight: "238px", backgroundColor: "lightgrey"}} type="submit" value="Close" className="btnAcct" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
         <div className="row">
           {/* <input type="submit" value="EXIT" className="btnAcct" name="exit" onClick={() => {this.props.exit(this.props.index)}} /> */}
           <br></br>
