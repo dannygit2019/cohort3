@@ -4,7 +4,7 @@ import money from './images/money.png';
 import newimage from './images/newimage.jpg';
 import { Account, AccountController } from './AccountandControllerPOJO';
 import { AddAccountCard } from './AccountCards';
-import { BarChart } from './BarChart'
+import { BarChart } from './Summary'
 
 
 class AccountPage extends Component {
@@ -62,7 +62,7 @@ class AccountPage extends Component {
 							this.setState({
 								balance: "",
 								accName: "",
-								titleCreated: "List of Accounts CREATED",
+								titleCreated: "Accounts CREATED",
 								keyCard: this.state.keyCard + 1,
 								cardDisplayStyle: { backgroundImage: "", height: "auto", width: "463px" }
 							})
@@ -187,7 +187,7 @@ class AccountPage extends Component {
 			<div className="bigWindow">
 				<div className="App" >
 					<h2 className="h22"><span className="spanshadow">Welcome to DT Bank</span></h2>
-					<div className="marquee"><p>Developed By Danny Tran - Learner @ EvolveU - GREAT TEAM!</p></div>
+					{/* <div className="marquee"><p>Developed By Danny Tran - Learner @ <span style={{color: "yellow"}}>EvolveU - GREAT TEAM!</span></p></div> */}
 				</div>
 				{/* <div hidden={this.state.hideChart}><BarChart exit={this.exitChart} array={this.newAccController.accountHolder} /></div> */}
 				<div hidden={this.state.hideChart}><BarChart toHide={this.exitChart} array={this.state.listForChart} /></div>
@@ -201,7 +201,7 @@ class AccountPage extends Component {
 							</div>
 							<p className="pLeft" id="leftmessage">{this.state.accSummary}</p><br></br><br></br><br></br><br></br>
 							{/* <BarChart array={this.newAccController.accountHolder}/> */}
-							<input type="submit" value="View Chart" name="btnChart" className="btnleft" onClick={this.handleSubmit} />
+							{/* <input type="submit" value="View Chart" name="btnChart" className="btnleft" onClick={this.handleSubmit} /> */}
 						</div>
 					</div>
 					<div className="leftSide midside" id="midside" >
@@ -225,7 +225,7 @@ class AccountPage extends Component {
 						</div>
 					</div>
 					<div className="leftSide rightside" id="rightside" style={this.state.cardDisplayStyle} onClick={this.removeErrorMessage} >
-						<h4 className="titleCreated">{this.state.titleCreated}</h4>
+						<h4 className="titleCreated" style={{color: "yellow"}}>{this.state.titleCreated}</h4>
 						{cards}
 					</div>
 				</div>

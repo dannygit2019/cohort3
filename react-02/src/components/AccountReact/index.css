@@ -1,6 +1,4 @@
-html {
-    background-color: teal;
-}
+
 .bigWindow {
     
     display: table;
@@ -140,8 +138,8 @@ html {
     font-weight: bold;
     display: inline-block;
     
-    /* height: 120px; */
-    height: 246px;
+    height: 245px;
+    /* height: 250px; */
     width: 373px;
     /* background-color: darkkhaki; */
     background-color: rgb(1, 94, 94);
@@ -155,25 +153,28 @@ html {
 
 .light {
     background-color: white;
-    /* margin-left: 50%; */
-    margin-top: 30px;
-    font-weight: bold;
-    /* width: 500px; */
-    
+    margin-left: 4px;
+    margin-top: 35px;
    
+}
+
+#SvgjsSvg1123 {
+    /* margin-bottom: 40px; */
 }
 
 .mixed-chart {
     margin-left: 20%;
     font-weight: bold;
-    color: black;
-    /* width: 500px; */
+    width: 100px;
 
 }
 
 
 .lcover {
    margin-left: 10px;
+   /* 2 lines below just added for city */
+   width: 375px;
+   height: 250px;
 }
 .pLeft {
     height: 50px;
@@ -264,7 +265,6 @@ h3 {
     width: 78px;
     margin-top: 20px;
     margin-right: 20px;
-    
     float: right;
     font-size: 15px;
     font-weight: bold;

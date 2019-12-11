@@ -118,7 +118,7 @@ class BarChart extends Component {
     return (
       // <div className="app" hidden={this.state.hideThisChart}>
       <div className="app" hidden={this.state.hideThisChart}>
-        <div><input style={{marginRight: "238px", backgroundColor: "lightgrey"}} type="submit" value="Close" className="btnAcct" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
+        <div><input style={{marginRight: "233px", backgroundColor: "lightgrey"}} type="submit" value="Close" className="btnAcct" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
         <div className="row">
           {/* <input type="submit" value="EXIT" className="btnAcct" name="exit" onClick={() => {this.props.exit(this.props.index)}} /> */}
           <br></br>
