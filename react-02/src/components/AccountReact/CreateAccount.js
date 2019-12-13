@@ -101,6 +101,7 @@ class AccountPage extends Component {
 				};
 				if (existList === true) {
 					highestBal = this.newAccController.highestValAccount();
+					this.newAccController.accountHolder=this.newAccController.accountHolder.sort((a,b) => {return a.key - b.key})
 					highestMessage = `The Account with Highest Balance is: ${highestBal.accountName} - $${highestBal.initialBalance}`;
 				} else {
 					highestMessage = "Sorry. You currently don't have an account with us.";
@@ -117,6 +118,7 @@ class AccountPage extends Component {
 				};
 				if (existList === true) {
 					lowestBal = this.newAccController.lowestValAccount();
+					this.newAccController.accountHolder=this.newAccController.accountHolder.sort((a,b) => {return a.key - b.key})
 					lowestMessage = `The Account with Lowest Balance is: ${lowestBal.accountName} - $${lowestBal.initialBalance}`;
 				} else {
 					lowestMessage = "Sorry. You currently don't have an account with us."
