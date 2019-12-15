@@ -11,17 +11,17 @@ class AccountPage extends Component {
 	constructor(props) {
 		super(props);
 		this.newAccController = new AccountController();
+		this.cardDisplayStyle= { backgroundImage: "url(" + newimage + ")", height: "235px", width: "375px" }
 		this.state = {
 			accSummary:"",
 			listForChart: [],
 			hideThreeDiv: false,
 			hideChart: true,
 			keyCard: 0,
-			balance: "",
+			balance: 0,
 			accName: "",
 			error: "",
-			titleCreated: "",
-			cardDisplayStyle: { backgroundImage: "url(" + newimage + ")", height: "250px", width: "470px" }
+			titleCreated: "Account Details",
 		}
 	}
 
@@ -51,47 +51,44 @@ class AccountPage extends Component {
 						accName: ''
 					})
 				} else {
-					if (this.state.balance === 0) {
-						this.setState({
-							balance: 0
-						})
-					} else {
+					// if (this.state.balance === "") {
+					// 	this.setState({
+					// 		error: "Please enter !",
+					// 	})
+					// } else {
 						if (this.state.accName !== "") {
 							this.newAccController.addAccount(this.state.keyCard, (this.state.accName).toUpperCase(), Number(this.state.balance));
-							// this.newAccController.addAccount((this.state.accName).toUpperCase(), Number(this.state.balance));
 							this.setState({
-								balance: "",
+								balance: 0,
 								accName: "",
-								titleCreated: "Accounts CREATED",
 								keyCard: this.state.keyCard + 1,
-								cardDisplayStyle: { backgroundImage: "", height: "auto", width: "463px" }
 							})
 						} else {
 							this.setState({
 								error: "Account Name is Mandatory. Please enter!"
 							});
 						}
-					}
+					// }
 				}
 				break;
 			case "btnClear":
 				this.setState({
-					balance: "",
+					balance: 0,
 					accName: "",
 					error: "",
 				})
 				break;
 			case "btnTotal":
+				let tempTotalMessage="";
 				if (existList === true) {
 					let totalAll = this.newAccController.balanceOfAllAccounts(this.newAccController.accountHolder);
-					this.setState({
-						accSummary: `Total Balance of All Accounts is: $${totalAll}`,
-					});
+					tempTotalMessage=`Total Balance of All Accounts is: $${totalAll}`;
 				} else {
-					this.setState({
-						accSummary: "Sorry. You currently don't have an account with us."
-					});
+					tempTotalMessage="Sorry. No Accounts found in our system.";
 				}
+				this.setState({
+					accSummary: tempTotalMessage
+				});
 				break;
 			case "btnHighest":
 				let highestMessage = "";
@@ -104,7 +101,7 @@ class AccountPage extends Component {
 					this.newAccController.accountHolder=this.newAccController.accountHolder.sort((a,b) => {return a.key - b.key})
 					highestMessage = `The Account with Highest Balance is: ${highestBal.accountName} - $${highestBal.initialBalance}`;
 				} else {
-					highestMessage = "Sorry. You currently don't have an account with us.";
+					highestMessage = "Sorry. No Accounts found in our system.";
 				}
 				this.setState({
 					accSummary: highestMessage
@@ -121,7 +118,7 @@ class AccountPage extends Component {
 					this.newAccController.accountHolder=this.newAccController.accountHolder.sort((a,b) => {return a.key - b.key})
 					lowestMessage = `The Account with Lowest Balance is: ${lowestBal.accountName} - $${lowestBal.initialBalance}`;
 				} else {
-					lowestMessage = "Sorry. You currently don't have an account with us."
+					lowestMessage = "Sorry. No Accounts found in our system."
 				}
 				this.setState({
 					accSummary: lowestMessage
@@ -134,10 +131,9 @@ class AccountPage extends Component {
 						hideChart: false,
 						hideThreeDiv: true
 					});
-					
 				} else {
 					this.setState({
-						accSummary: "Sorry. You currently don't have an account with us."
+						accSummary: "Sorry. No Accounts found in our system."
 					});
 				}
 				break;
@@ -147,15 +143,11 @@ class AccountPage extends Component {
 		const toConfirm = confirm("Would you like to delete this Account?");
 		if (toConfirm) {
 			this.newAccController.removeAccount(index);
-			// this.newAccController.accountHolder.splice(index,1); // pls keep this
 			if (this.newAccController.accountHolder.length < 1) {
-				// document.getElementById('rightside').style.height = "250px";
-				// document.getElementById('rightside').style.backgroundImage = "url(" + newimage + ")"
 				this.setState({
 					accName: "",
 					balance: "",
-					titleCreated: "",
-					cardDisplayStyle: { backgroundImage: "url(" + newimage + ")", height: "250px", width: "465px" }
+					keyCard: this.state.keyCard + 1,
 				});
 			}
 		} else {
@@ -182,56 +174,61 @@ class AccountPage extends Component {
 	}
 	render() {
 		let cards = this.newAccController.accountHolder.map((card, i) => {
-			// return <AddAccountCard removeMessage={this.removeMessage} accountHolder={this.newAccController.accountHolder} deleteAccount={this.deleteAccount} index={i} key={i} accName={card.accName} detail={card.showAccName()} />
 			return <AddAccountCard removeMessage={this.removeMessage} accountHolder={this.newAccController.accountHolder} deleteAccount={this.deleteAccount} index={i} key={i} />
 		});
 		return (
 			<div className="bigWindow">
 				<div className="App" >
 					<h2 className="h22"><span className="spanshadow">Welcome to DT Bank</span></h2>
-					{/* <div className="marquee"><p>Developed By Danny Tran - Learner @ <span style={{color: "yellow"}}>EvolveU - GREAT TEAM!</span></p></div> */}
+					<div className="marquee"><p>Developed By Danny Tran - Learner @ <span style={{color: "yellow"}}>EvolveU - GREAT TEAM!</span></p></div>
 				</div>
-				{/* <div hidden={this.state.hideChart}><BarChart exit={this.exitChart} array={this.newAccController.accountHolder} /></div> */}
 				<div hidden={this.state.hideChart}><BarChart toHide={this.exitChart} array={this.state.listForChart} /></div>
-				<div hidden={this.state.hideThreeDiv}>
-					<div className="leftSide lcover" id="lside">
-						<div className="leftdisplayarea" id="displayarea" onClick={this.removeErrorMessage}>
-							<div className="buttonsContainer">
-								<input type="submit" value="Total Balance" name="btnTotal" className="btnleft" onClick={this.handleSubmit} />
-								<input type="submit" value="Highest Acct." name="btnHighest" className="btnleft" onClick={this.handleSubmit} />
-								<input type="submit" value="Lowest Acct." name="btnLowest" className="btnleft" onClick={this.handleSubmit} />
+					<div hidden={this.state.hideThreeDiv} style={{width: "98%",marginLeft: "",marginRight: "", backgroundColor:"",height: '235px'}}>
+						<div className="leftSide lcover" id="lside">
+							<div className="leftdisplayarea" id="displayarea" onClick={this.removeErrorMessage}>
+								<div className="summaryBoard">Summary Board</div>
+								<div className="buttonsContainer">
+								<button name="btnTotal" className="btnleft" onClick={this.handleSubmit}>Total Balance (All Accounts)</button>
+								<button name="btnHighest" className="btnleft" onClick={this.handleSubmit}>Highest Balance</button>
+								<button name="btnLowest" className="btnleft" onClick={this.handleSubmit}>Lowest Balance</button>
+									{/* <input type="submit" value="Total Balance" name="btnTotal" className="btnleft" onClick={this.handleSubmit} />
+									<input type="submit" value="Highest Acct." name="btnHighest" className="btnleft" onClick={this.handleSubmit} />
+									<input type="submit" value="Lowest Acct." name="btnLowest" className="btnleft" onClick={this.handleSubmit} /> */}
+								</div>
+								<p className="pLeft" id="leftmessage">{this.state.accSummary}</p><br></br><br></br>
+								{/* <br></br><br></br> */}
+								<input type="submit" value="View Chart" name="btnChart" className="btnAcctChart" onClick={this.handleSubmit} />
 							</div>
-							<p className="pLeft" id="leftmessage">{this.state.accSummary}</p><br></br><br></br><br></br><br></br>
-							{/* <BarChart array={this.newAccController.accountHolder}/> */}
-							{/* <input type="submit" value="View Chart" name="btnChart" className="btnleft" onClick={this.handleSubmit} /> */}
 						</div>
-					</div>
-					<div className="leftSide midside" id="midside" >
-						<div onClick={this.removeMessage} className="leftdisplayarea midcreate" id="displayarea1" style={{ backgroundImage: "url(" + money + ")", height: "250px", width: "400px" }}>
-							{/* <h3>&lt;&lt;&lt; Create a New Account &gt;&gt;&gt;</h3> */}
-							<h3>$$ Create a New Account $$</h3>
-							<label className="lblAcct">
-								Enter Account Name:
-									<input type="text" autoFocus className="acct" name="accName" value={this.state.accName} onChange={this.handleChange} />
-							</label>
-							<br></br>
-							<label className="lblAcct">
-								Enter Initial Balance:
-									<input type="number" className="acct" name="balance" value={this.state.balance} onChange={this.handleChange} />
-							</label>
-							<br></br>
-							<p className="forCreateAccount">{this.state.error}</p>
-							<br></br>
-							<input type="submit" value="Clear" name="btnClear" className="btnAcct" onClick={this.handleSubmit} />
-							<input type="submit" value="Create" name="btnCreate" className="btnAcct" onClick={this.handleSubmit} />
+						<div className="leftSide midside" id="midside" >
+							<div onClick={this.removeMessage} className="leftdisplayarea midcreate" id="displayarea1" style={{ backgroundImage: "url(" + money + ")", height: "235px", width: "390px" }}>
+								<h3>$$ Create a New Account $$</h3>
+								<label className="lblAcct">
+									Enter Account Name:
+										<input type="text" autoFocus className="acct" name="accName" value={this.state.accName} onChange={this.handleChange} />
+								</label>
+								<br></br>
+								<label className="lblAcct">
+									Enter Initial Balance:
+										<input type="number" className="acct" name="balance" value={this.state.balance} onChange={this.handleChange} />
+								</label>
+								<br></br>
+								<p className="forCreateAccount">{this.state.error}</p>
+								<br></br>
+								<input type="submit" value="Clear" name="btnClear" className="btnAcct" onClick={this.handleSubmit} />
+								<input type="submit" value="Create" name="btnCreate" className="btnAcct" onClick={this.handleSubmit} />
+							</div>
 						</div>
+						<div className="leftSide rightside" id="rightside" style={this.cardDisplayStyle} onClick={this.removeErrorMessage} >
+							{/* <h4 className="titleCreated" style={{color: "yellow"}}>{this.state.titleCreated}</h4>
+							{cards} */}
+						</div>	
 					</div>
-					<div className="leftSide rightside" id="rightside" style={this.state.cardDisplayStyle} onClick={this.removeErrorMessage} >
-						<h4 className="titleCreated" style={{color: "yellow"}}>{this.state.titleCreated}</h4>
-						{cards}
-					</div>
+				<div className="cardDisplay" hidden={this.state.hideThreeDiv} onClick={this.removeErrorMessage} >
+					<h4 className="titleCreated" style={{color: "yellow"}}>{this.state.titleCreated}</h4>
+					{cards}
 				</div>
-			</div>
+			</div>	
 		);
 	}
 }

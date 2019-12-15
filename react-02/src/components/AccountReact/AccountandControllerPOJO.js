@@ -1,7 +1,6 @@
 
 class Account {
 	constructor(key,accountName, initialBalance) {
-		
 		this.key=key;
 		this.accountName = accountName;
 		this.initialBalance = initialBalance;
@@ -22,48 +21,19 @@ class Account {
 }
 class AccountController {
 	constructor() {
-		
 		this.accountHolder = [];
 	}
 
 	addAccount(key,accName, initBalance) {
 		this.accountHolder.push(new Account(key,accName, initBalance));
-	
 	}
-
-	// getacctName(nameInput) {
-	// 	return this.accountHolder.filter(acctName => acctName.accountName === nameInput)[0];
-	// }
-
-	// removeAccount(accToDelete) {
-	
-	// 	let newAccHolder = this.accountHolder.filter(function (value, index, arr) {
-	// 		return value.accountName !== accToDelete;
-	// 	});
-
-	// 	this.accountHolder = newAccHolder;
-	// 	return this.accountHolder;
-	// }
-
 	removeAccount(keyAccount) {
-	
 		let newAccHolder = this.accountHolder.filter(function (value, index, arr) {
 			return index !== keyAccount;
 		});
-
 		this.accountHolder = newAccHolder;
 		return this.accountHolder;
 	}
-	// getAccBalance(acc) {
-	// 	let newarray = acc.map(myFunction)
-	// 	function myFunction(num) {
-	// 		return num.initialBalance;
-	// 	}
-	// 	this.accountHolder = newarray;
-	// 	return this.accountHolder;
-
-	// }
-
 	balanceOfAllAccounts(acc) {
 		let newarray = acc.map((element) => {
 			return element.initialBalance;

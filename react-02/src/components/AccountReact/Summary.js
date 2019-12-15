@@ -35,7 +35,7 @@ class BarChart extends Component {
         id: "basic-bar",
       },
       title: {
-        text: "ACCOUNTS SUMMARY BY HIGHEST BALANCE",
+        text: "ACCOUNTS REPORT BY HIGHEST BALANCE",
         align: 'center',
         margin: 10,
         offsetX: 0,
@@ -43,7 +43,7 @@ class BarChart extends Component {
         floating: false,
         style: {
           fontSize:  '20px',
-          color:  'blue'//'#263238'
+          color:  'brown'//'#263238'
         },
     },
       xaxis: {
@@ -118,18 +118,17 @@ class BarChart extends Component {
     return (
       // <div className="app" hidden={this.state.hideThisChart}>
       <div className="app" hidden={this.state.hideThisChart}>
-        <div><input style={{marginRight: "233px", backgroundColor: "lightgrey"}} type="submit" value="Close" className="btnAcct" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
+        <div><input style={{marginTop:"5px",marginRight: "202px", backgroundColor: "lightgrey"}} type="submit" value="Close" className="btnAcct btnCloseBlack" name="hide" onClick={() => {this.props.toHide(this.props.index)}} /></div>
         <div className="row">
           {/* <input type="submit" value="EXIT" className="btnAcct" name="exit" onClick={() => {this.props.exit(this.props.index)}} /> */}
           <br></br>
           <div className="mixed-chart">
             <Chart
-              
               options={options}
               series={series}
               type="bar"
               width="800"
-              height="370"
+              height="350"
             />
           </div>
         </div>

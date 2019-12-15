@@ -1,48 +1,33 @@
 
 .bigWindow {
-    
-    display: table;
-    
     float: left;
     width: 100%;
     height: auto;
-    
-    /* margin-right: auto;
-   
-    margin-left: auto;
-    
-    margin-bottom: auto; */
-   
-    /* background-color: rgb(1, 94, 94); */
-  
+}
+.container {  
+    width: auto;
 }
 .inside {
-    /* background-color: teal; */
     background-color: transparent;
-    /* opacity: 0.8; */
     height: 60px;
     width: 600px;
-    /* color: rgb(231, 231, 5); */
     color: rgb(2, 2, 124);
     font-size: 40px;
     text-align: center;
     font-weight:bolder;
     margin-top: 1px;
-    margin-bottom: 3px;
-    /* padding-top: 11px; */
+    margin-bottom: 3px; 
     margin-left: 28%;
 }
 .topic {
     color: rgb(216, 216, 4);
-    
     font-weight: bolder;
     text-align: center;
     width: 300px;
     height: 80px;
     padding-top: 10px;
     padding-left: 2px;
-    margin-left: 45px;
-    
+    margin-left: 45px;    
 }
 .topBanner {
     height:10px;
@@ -54,7 +39,6 @@
 .b1 {
     background-color:darkgreen;
     height: 80px;
-    
     text-align: center;
     padding-top: 10px;
     font-size: 30px;
@@ -63,55 +47,47 @@
     font-family: fantasy;
 }
 .leftSide {
-    /* border: 1px solid black; */
-    display: inline-block;
-    /* padding: 5px 35px 20px 35px; */
+     display: inline-block;
     float: left;
     text-align: center;
-    width: 375px;
-    /* height: 580px; */
-    height: auto;
+    width: 300px;
     margin-left: 5px;
     margin-top: 2px;
-    /* background-color: darkkhaki; */
     background-color: rgb(1, 94, 94);
-  
-    /* margin-left: 2px; */
-    
 }
-
-
 .buttonsContainer {
-    
     display: inline-block;
-   
-    /* background-color: rgb(125, 107, 189); */
-    width: 370px;
-    
+    width: 350px;
+    margin-left: 1px;
+    margin-right: 2px;
     height: 50px;
-    margin: 2px 2px 2px 2px;
     color: rgb(1, 102, 102);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
 }
 .bTop1 {
-    
-    display: inline-block;
-   
+    display: inline-block;   
     background-color: red;
     width: 370px;
     height: 120px;
     color: rgb(1, 102, 102);
     margin-right: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
 }
 .bt2 {
     margin-left: 5px;
     width: 410px;
-
     margin-right: 2px;
-    
+}
+.btnAcctChart {
+    width: 110px;
+    height: 40px;
+    /* margin: 0px 2px 2px 1px; */
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+
+    background-color: transparent; 
 }
 .btnleft {
     width: 110px;
@@ -121,99 +97,69 @@
     font-weight: bold;
     display: inline-block;
     color: white;
-
     background-color: transparent; 
 }
-/* .btnleft {
-    width: 110px;
-    height: 50px;
-    margin: 15px 10px 10px 10px;
-    text-align: center;
-    font-weight: bold;
-    display: inline-block;
-    background-color: transparent; 
-} */
 .leftdisplayarea {
     color: darkblue;
     font-weight: bold;
     display: inline-block;
-    
-    height: 245px;
-    /* height: 250px; */
-    width: 373px;
-    /* background-color: darkkhaki; */
+    height: 232px;
+    width: 350px;
     background-color: rgb(1, 94, 94);
     border: 1px solid black;
     margin-top: 2px;
-    margin-right: 0px;
-
-
-
+    margin-right: 5px;
 }
 
 .light {
     background-color: white;
     margin-left: 4px;
-    margin-top: 35px;
-   
-}
-
-#SvgjsSvg1123 {
-    /* margin-bottom: 40px; */
+    margin-top: 18px;
 }
 
 .mixed-chart {
-    margin-left: 20%;
+    margin-left: 17%;
     font-weight: bold;
     width: 100px;
-
 }
-
-
 .lcover {
-   margin-left: 10px;
-   /* 2 lines below just added for city */
-   width: 375px;
-   height: 250px;
+   width: 32%;
+   height: 235px;
+   margin-left: 18px;
+   background-color: transparent;
 }
 .pLeft {
     height: 50px;
     color: yellow;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     background-color: teal;
-    /* margin-top: 50px; */
+    margin-left: 2px;
+    margin-right: 2px;
     padding-top: 15px;
 }
 .midcreate {
-    width: 420px;
-    /* height: 300px; */
-    margin-top: 1px;
+    width: 350px;
+    margin-top: 0px;
     border: 0px;
     text-align: center;
 }
 
 .midside {
-    /* background-color: darkkhaki; */
     background-color: rgb(1, 94, 94);
-    /* border: 1px solid black; */
-    /* width: 450px; */
-    width: 410px;
+    width: 32%;
     height: auto;
-    display: inline-block;
-    margin-left: 12px;
-    margin-right: 12px;
-    
-    /*margin-right: 1px; */
+    margin-left: 0px;
+    margin-right: 2px;
+    margin-right: 17px;
     text-align: center;
 }
 h1 {
     font-size: 28px;
-   
 }
 h3 {
     color: darkred;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -221,18 +167,15 @@ h3 {
 .pmessage {
     margin-bottom: 20px;
     margin-top: 40PX;
-    
     height: 50px;
     color: red;
     font-size: 17px;
     font-weight: bolder;
     font-style: italic;
-    
 }
 .forCreateAccount {
     margin-bottom: 20px;
-    margin-top: 20PX;
-    
+    margin-top: 30PX;
     height: 50px;
     color: red;
     font-size: 17px;
@@ -244,17 +187,12 @@ h3 {
    font-size: 16px;
    margin-left: 8px;
    margin-top: 5px; 
-   
    font-weight: bolder;
    width: 380px;
-   
-   
-   /* border: 1px solid blue; */
    font-weight: bold;
 }
 .acct {
     float: right;
-    /* width: 250px; */
     width: 200px;
     margin-right: 8px; 
     margin-top: 2px;
@@ -263,35 +201,27 @@ h3 {
 .btnAcct {
     height: 28px;
     width: 78px;
-    margin-top: 20px;
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
     float: right;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     background-color: teal;
 }
 .btnDetail {
-    height: 28px;
+    height: 25px;
     width: 78px;
-    margin-top: 5px;
+    margin-top: 2px;
     margin-right: 5px;
     float: right;
+    color: black;
     font-size: 15px;
-    font-weight: bold;
+    /* font-weight: bold; */
     background-color: teal;
 }
-/* .btnright {
-    display: inline-block;
-    
-    margin-top: 1px;
-    float: right;
-    margin-right: 4px;
-    height: 28px;
-    width: 84px;
-} */
+
 .btnright {
-    /* display: inline-block; */
-    
     margin-top: 1px;
     float: right;
     margin-right: 4px;
@@ -306,72 +236,67 @@ p {
 .pdisplay {
     font-size: 17px;
     font-weight: bold;
-    /* margin-bottom: 1px;
-    margin-top: 2px; */
-    
     overflow-wrap: normal;
     background-color: white;
     color: brown;
+    border-radius: 15px 15px;
     height: 25px;
-    align-content: center;
-    /* justify-content: center; */
-    align-content: center;
+    text-align: left;
+    /* align-content: center; */
     margin-left: 5px;
     margin-right: 5px;
-    margin-bottom: 0px;
+    margin-bottom: 2px;
     margin-top: 2px;
-    padding-top: 1px;
+    padding-top: 2px;
+    padding-left: 5px;
 }
 .pBig {
     height: 35px;
     justify-content: center;
     font-size: 16px;
     color: yellow;
-    
     background-color: teal;
-    
 }
+
 .rightshow {
     border: 0.5px solid white;
-    height:120px;
-    /* height:218px; */
-    width: 450px;
-
+    height:62px;
+    width: 100%;
     color: darkblue;
-    margin-left: 5px;
+    margin-left: 1px;
     margin-right: 1px;
     margin-bottom: 5px;
     margin-top: 2px;
-    /* background-color: rgb(1, 66, 66); */
-
+}
+.cardDisplay {
+    width: 96%;
+    margin-top: 8px;
+    margin-left: 25px;
+    margin-right: 20px;    
 }
 .titleCreated {
     font-size: 20px;
-    color: white;
     font-weight: bold;
-    height: 15px;
-    margin: 2px 0px 10px 0px;
+    height: 25px;
+    background-color: teal;
+    border-radius: 35px 35px;
+    margin: 2px 0px 5px 1px;
 }
 .rightside {
-    /* width: 445px; */
     width: 456px;
-    height: 250px;
+    height: 235px;
     border: 0.5px solid black;
-    /* height: 250px; */
-    margin-left: 0px;
+    margin-left: 11px;
     margin-right: 0px;
-    
     background-color: rgb(1, 94, 94);
-
 }
 .rightPop {
-    /* width: 225px; */
-    width: 150px;
+    width: 80px;
     float: right;
     margin-right: 4px;
     margin-top: 0px;
     margin-bottom: 5px;
-    margin-left: 67px;
+    margin-left: 10px;
 }
 .selection {
     height: 30px;
@@ -383,22 +308,11 @@ p {
 }
 .lblmoving {
     float: left;
-    
-    
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-left: 15px;
+    margin-left: 10px;
     align-content: center;
     color: white;
     font-weight: bold;
  }
 
-/* Right side */
-/* .rightside {
-    color: darkblue; margin-left: 0px;
-    font-weight: bold;
-    display: inline-block;
-   
-    background-color: darkkhaki;
-    border: 2px solid black;
-} */
