@@ -316,3 +316,8 @@ p {
     font-weight: bold;
  }
 
+ /* @media (max-width: 600px) {
+    .bigWindow{
+      width: 100%;
+    }
+  } */
