@@ -1,0 +1,168 @@
+
+.midside1 {
+    background-color: rgb(1, 94, 94);
+    width: 32%;
+    height: auto;
+    margin-left: 1px;
+    margin-right: 17px; 
+    text-align: center;
+}
+.lcoverCity {
+    margin-left: 16px;
+  
+}
+.forCreateAccount1 {
+    margin-bottom: 8px;
+    margin-top: 45PX;
+    
+    height: 20px;
+    color: red;
+    font-size: 17px;
+    font-weight: bolder;
+    font-style: italic;
+}
+.btnDetail1 {
+    height: 28px;
+    width: 78px;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: teal;
+}
+.lblCity {
+   float: left;
+   font-size: 16px;
+   margin-left: 9px;
+   margin-top: 8px; 
+   font-weight: bold;
+}
+.city {
+    float: right;
+    width: 180px;
+    margin-left: 10px;
+    margin-right: 8px;
+    margin-top: 5px;
+}
+
+.btnCity {
+    height: 28px;
+    width: 78px;
+    margin-right: 8px;
+    margin-top: 2px;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: teal;
+    color: white;
+}
+.btnCloseBlack {
+   
+    color: black;
+}
+.btnleft1 {
+    width: 110px;
+    height: 40px;
+    /* margin: 40px 2px 2px 1px; */
+    margin: 0px 2px 2px 1px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    color: white;
+
+    background-color: transparent; 
+}
+.btnright1 {
+    display: inline-block;
+    color: black;
+    /* font-weight: bold; */
+    margin-top: 0px;
+    margin-bottom: 1px;
+    padding: 1px 1px 1px 1px;
+    float: right;
+    margin-right: 4px;
+    margin-left: 2px;
+    height: 25px;
+    width: 82px;
+}
+p {
+    height: 5px;
+    margin-bottom: 0px;
+    margin-top: 1px;
+}
+.pdisplay1 {
+    border-radius: 15px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    overflow-wrap: normal;
+    background-color: white;
+    color: brown;
+    height: 25px;
+    text-align: left;
+    align-content: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: -12px;
+    margin-top: 2px;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+.errorDisplay {
+  
+    /* margin-left: 100px; */
+    color: red;
+    font-size: 14px;
+    background-color: transparent;
+    font-style: italic;
+    float: right;
+    /* margin-right: 20px; */
+    margin-top:2px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.summaryBoard {
+    color: brown;
+    background-color: white;
+    height: 30px;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 2px;
+}
+.pBig1 {
+    height: 35px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    justify-content: center;
+    font-size: 16px;
+    color: yellow;
+    background-color: teal;
+}
+.rightside1 {
+    width: 45%;
+    height: 250px;
+    border: 0.5px solid black;
+    margin-left: 2px;
+    margin-right: 0px;
+}
+.selection1 {
+    height: 30px;
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: darkred;
+}
+.lblmoving1 {
+    float: left;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 10px;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+ }
+

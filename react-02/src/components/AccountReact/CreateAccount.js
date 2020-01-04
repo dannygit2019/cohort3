@@ -51,11 +51,6 @@ class AccountPage extends Component {
 						accName: ''
 					})
 				} else {
-					// if (this.state.balance === "") {
-					// 	this.setState({
-					// 		error: "Please enter !",
-					// 	})
-					// } else {
 						if (this.state.accName !== "") {
 							this.newAccController.addAccount(this.state.keyCard, (this.state.accName).toUpperCase(), Number(this.state.balance));
 							this.setState({
@@ -68,7 +63,6 @@ class AccountPage extends Component {
 								error: "Account Name is Mandatory. Please enter!"
 							});
 						}
-					// }
 				}
 				break;
 			case "btnClear":
@@ -188,9 +182,9 @@ class AccountPage extends Component {
 							<div className="leftdisplayarea" id="displayarea" onClick={this.removeErrorMessage}>
 								<div className="summaryBoard">Summary Board</div>
 								<div className="buttonsContainer">
-								<button name="btnTotal" className="btnleft" onClick={this.handleSubmit}>Total Balance (All Accounts)</button>
-								<button name="btnHighest" className="btnleft" onClick={this.handleSubmit}>Highest Balance</button>
-								<button name="btnLowest" className="btnleft" onClick={this.handleSubmit}>Lowest Balance</button>
+									<button name="btnTotal" className="btnleft" onClick={this.handleSubmit}>Total Balance (All Accounts)</button>
+									<button name="btnHighest" className="btnleft" onClick={this.handleSubmit}>Highest Balance</button>
+									<button name="btnLowest" className="btnleft" onClick={this.handleSubmit}>Lowest Balance</button>
 									{/* <input type="submit" value="Total Balance" name="btnTotal" className="btnleft" onClick={this.handleSubmit} />
 									<input type="submit" value="Highest Acct." name="btnHighest" className="btnleft" onClick={this.handleSubmit} />
 									<input type="submit" value="Lowest Acct." name="btnLowest" className="btnleft" onClick={this.handleSubmit} /> */}
