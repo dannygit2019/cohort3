@@ -1,16 +1,16 @@
-import React, { useState,useContext } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState,useContext, useEffect } from 'react';
 import './indexList.css';
 import { LinkedList, ListNode } from './linkedListLogic';
 import {ThemeContext} from '../Context/context'
+
 // import {NodeList} from './nodeList'
 // const linkedList = new LinkedList();
 
 const linkedList = new LinkedList();
+
 const List = () => {
-    
+       
     const context = useContext (ThemeContext);
-    // let [bgColor, setBgColor] = useState("");
     let [fColor, setFColor] = useState(context.fontColor);
     let [bgColor, setBgColor] = useState(context.bgColor);
     let [currentItem, setCurrentItem] = useState("");
@@ -98,11 +98,10 @@ const List = () => {
         }
     }
     const NodeList = (props) => (
-        <div className="nodeCreated" >
-            {/* <p className="pdisplay node">{`Subject: ${props.current.subject}. Amount: ${props.current.amount}`} </p> */}
-            {/* <p className="pdisplay node" style={{ color: fColor}}>{props.current.show()}</p> */}
+        // <div className="nodeCreated" >
+        <div className={`nodeCreated ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)} >
             <p className="pdisplay node" style={{ color: fColor, backgroundColor: bgColor }}>{props.current.show()}</p>
-            {/* <p className="pdisplay node" style={{ color: fColor}}>{props.current.show()}</p> */}
+            {/* <p className={`pdisplay node ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)}>{props.current.show()}</p> */}
         </div>
     )
 
@@ -118,6 +117,8 @@ const List = () => {
                 key++;
                 current = current.forwardNode;
             }
+            
+       
             return nodeList;
         }
         

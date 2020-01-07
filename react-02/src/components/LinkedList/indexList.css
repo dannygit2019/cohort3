@@ -41,6 +41,7 @@
     margin-top: 2px;
     border: 1px solid white;
     height: 30px;
+    
 }
 .message {
     color: yellow;
@@ -50,4 +51,9 @@
 .node {
     background-color: white;
     text-align: center;
+    /* width: 70%; */
+    /* margin-left: 15%; */
+}
+.currentNode {
+    background-color:yellow;
 }
