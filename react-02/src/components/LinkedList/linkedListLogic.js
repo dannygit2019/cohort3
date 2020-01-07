@@ -29,8 +29,10 @@ export class LinkedList {
 				this.currentNode.forwardNode=nodeInstance;
 				this.currentNode=nodeInstance;
 			}
+			
 			return this.currentNode;
 		}
+		
 	};
 
 	first() { this.currentNode = this.head};
@@ -55,7 +57,6 @@ export class LinkedList {
 	previous() {
 		let prevNode=this.head;  // to hold a previous node in a loop
 		// checking from the head
-		console.log("head", this.head)
 		if (this.currentNode === this.head) {
 			return ;
 		}
@@ -71,19 +72,26 @@ export class LinkedList {
 				this.head=null;
 				return this.currentNode=null;
 			} else { // not the head which tail
+				
 				this.previous();
-				this.head = this.currentNode;
 				this.currentNode.forwardNode=null;
 				return this.currentNode;
+				// this.previous();
+				// this.head = this.currentNode;
+				// this.currentNode.forwardNode=null;
+				// return this.currentNode;
 			}		
 		} else { // if forward node is not null
 			if (this.currentNode === this.head) {
 				this.head = this.currentNode.forwardNode;
 				this.currentNode = this.head;
+				return this.currentNode;
 			} else {
+				
 				let currentNodeValue= this.currentNode;
 				this.previous();
 				this.currentNode.forwardNode=currentNodeValue.forwardNode;
+				
 			}
 		}
 	}

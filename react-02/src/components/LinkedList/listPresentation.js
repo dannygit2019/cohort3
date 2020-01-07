@@ -99,10 +99,14 @@ const List = () => {
     }
     const NodeList = (props) => (
         // <div className="nodeCreated" >
-        <div className={`nodeCreated ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)} >
-            <p className="pdisplay node" style={{ color: fColor, backgroundColor: bgColor }}>{props.current.show()}</p>
-            {/* <p className={`pdisplay node ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)}>{props.current.show()}</p> */}
+        // <div className={`nodeCreated ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)} >
+        //     <p className="pdisplay node" style={{ color: fColor, backgroundColor: bgColor }}>{props.current.show()}</p>
+        // </div>
+        <div className="nodeCreated" style={{ color: fColor, backgroundColor: bgColor }}>
+            <p className={`pdisplayLL ` + ((props.current === linkedList.currentNode) ? "currentNode" : null)}>{props.current.show()}</p>
         </div>
+
+
     )
 
     const displayNodes = (list) => {
