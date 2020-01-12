@@ -16,6 +16,7 @@ class TicTacToe extends Component {
 					<img src={tictactoe} className="App-logo" alt="logo"/> */}
 					
 					<h2 className="h22"><span className="spanshadow">Welcome to TicTacToe Game. Enjoy!</span></h2>
+					<div className="marquee"><p></p></div>
 				{/* </div> */}
 			</div>
 		)

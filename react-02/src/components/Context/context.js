@@ -6,7 +6,7 @@ class ThemeProvider extends React.Component {
     constructor () {
         super ()
         this.state = {
-            fontColor: "black",
+            fontColor: "brown",
             bgColor: "white"
         }
     }

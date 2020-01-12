@@ -1,0 +1,50 @@
+.queueStackContent {
+    background-color: teal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    height: 380px;
+    /* border: 1px solid white; */
+}
+.queueStack {
+    background-color: white;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 23px;
+    width: 120px;
+}
+.btnQueueStack {
+    height: 29px;
+    width: 85px;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: teal;
+    color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.listDisplay {
+    height: 100px;
+    background-color: white;
+    margin-top: 5px;
+    text-align: center;
+    padding-top: 1px;
+}
+.infoLine {
+    float: left;
+    margin-left: 5px;
+}
+.title {
+    color: brown;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+}
+.test {
+    color: red;
+}
+.currentTest {
+    background-color: yellow;
+}

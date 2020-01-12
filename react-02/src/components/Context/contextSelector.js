@@ -19,7 +19,7 @@ class Theme extends Component {
                             <label className="lbllist">
                                 Select Font Color:
                                 <select value={this.context.fontColor} onChange={this.context.changeFontColor}>
-                                    <option value="Default">Black(Default)</option>
+                                    <option value="Brown">Brown(Default)</option>
                                     <option value="purple">Purple</option>
                                     <option value="blue">Blue</option>
                                 </select>
@@ -28,11 +28,18 @@ class Theme extends Component {
                             <label className="lbllist">
                                 Select BG Color:
                                 <select value={this.context.bgColor} onChange={this.context.changeBGColor}>
-                                    <option value="Default">White(Default)</option>
-                                    <option value="cadetblue">Cadetblue</option>
-                                    <option value="lightGrey">lightGrey</option>
+                                    <option value="White">White(Default)</option>
+                                    <option value="lightskyblue">Light-SkyBlue</option>
+                                    <option value="lightGrey">light-Grey</option>
                                 </select>
                             </label>
+                            <br></br><br></br>
+                            <div style={{float:"left",height:90, backgroundColor:"white", color:"brown"}}>
+                            <p style={{fontSize: 16, fontWeight:"bold", float:"left"}}>NOTES:</p><br></br><br></br>
+                            <p style={{float:"left"}}> - For Linked List and FIFO-LIFO pages: <strong>Font Color and Background Color </strong>will be applied when new Items created.</p>
+                            <br></br><br></br>
+                            <p style={{float:"left"}}>- For Account page: <strong>Font Color</strong> will be applied when new Items created.</p>
+                            </div>
                         </div>
                     </div>
                 </div>

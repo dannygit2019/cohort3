@@ -18,6 +18,7 @@ const List = () => {
     let [amount, setAmount] = useState("");
     let [message, setMessage] = useState("");
     
+    
     const handleInsert = () => {
         let displayMesage = "";
         if (subject !== "" && amount !== "") {

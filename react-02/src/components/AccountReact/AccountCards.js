@@ -1,21 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component,useContext } from 'react';
 import './index.css';
 import money from './images/money.png';
 import newimage from './images/newimage.jpg';
 import { AccountController } from './AccountandControllerPOJO';
 
-
+import {ThemeContext} from '../Context/context'
 
 class AddAccountCard extends Component {
+	static contextType = ThemeContext;
+	componentDidMount() {
+		const useFontColor = this.context.fontColor;
+		this.setState({
+			fColor: useFontColor
+		})
+	}
 	constructor(props) {
 		super(props);
 		this.bgColor="";
 		this.errorStr="Error Message: ";
+		
 		this.state = {
 			balUpdate: "",
 			message: "",
-			selectedCardColor: ""
-		}
+			selectedCardColor: "",
+			fColor: ""
+		}		
 	}
 	handleChange = event => {
 		this.setState({
@@ -82,8 +91,10 @@ class AddAccountCard extends Component {
 		};
         return (
             
-            <div className="rightshow" onFocus={this.handleGotFocus} onBlur={this.handleLostFocus} style={{backgroundColor: this.bgColor}} onClick={this.props.removeMessage}>
-				<p className="pdisplay" id="displayDetail" style={{backgroundColor: this.state.selectedCardColor}}>{this.props.accountHolder[this.props.index].showAccName()}
+			// <div className="rightshow" onFocus={this.handleGotFocus} onBlur={this.handleLostFocus} style={{backgroundColor: this.bgColor}} onClick={this.props.removeMessage}>
+			<div className="rightshow" onFocus={this.handleGotFocus} onBlur={this.handleLostFocus} style={{backgroundColor: this.bgColor}} onClick={this.props.removeMessage}>
+				{/* <p className="pdisplay" id="displayDetail" style={{color: this.state.fColor, backgroundColor: this.state.selectedCardColor}}>{this.props.accountHolder[this.props.index].showAccName()} */}
+				<p className="pdisplay" id="displayDetail" style={{color: this.state.fColor, backgroundColor: this.state.selectedCardColor}}>{this.props.accountHolder[this.props.index].showAccName()}
 				<span className="errorDisplay" >{this.state.message}</span>
 				</p>
                 <label className="lblmoving">
