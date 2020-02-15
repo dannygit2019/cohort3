@@ -1,0 +1,20 @@
+REPORT - TOTAL RES_CNT BY Class and Sector
+
+1. Residential         	 1263734
+2. Industrial          	     922
+3. Major Park          	       0
+4. Residual Sub Area   	       0
+--------------------------------
+Total by CLASS: 	 1264656
+********************************
+1. CENTRE              	  199977
+2. SOUTH               	  227345
+3. NORTHEAST           	  185534
+4. NORTHWEST           	  174126
+5. NORTH               	  160502
+6. SOUTHEAST           	  135009
+7. EAST                	   57666
+8. WEST                	  124497
+--------------------------------
+Total by SECTOR: 	 1264656
+Total Number of Lines (Exclude this line): 19
