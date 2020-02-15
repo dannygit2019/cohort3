@@ -44,7 +44,6 @@ def readDirectories(directoryInput):
     return detail
 
 # Exercise - Working with Data (.csv)
-
 def workWithCsv():
     groupByClass = {}
     groupBySector={}
