@@ -1,0 +1,11 @@
+Invoice No. 3. Invoice Date: 12-09-2019
+Customer Name: Rebecca Wang
+
+PRODUCT NAME:		UNIT PRICE:		QTY:
+        Mini Oven		299.99		 1
+  Portable Heater		119.99		 1
+           Washer		999.99		 1
+
+Sales_Amt:             1419.97
+GST:                    71.00
+Total Sales:           3611.94
