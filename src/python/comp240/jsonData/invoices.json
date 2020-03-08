@@ -1,0 +1,82 @@
+{
+  "1": {
+    "customer_id": 1, 
+    "gst": 124.9985, 
+    "invoice_date": "11-01-2019", 
+    "invoice_id": 1, 
+    "sales_amount": 2499.97, 
+    "total_amount": 2624.9685
+  }, 
+  "2": {
+    "customer_id": 2, 
+    "gst": 100.9985, 
+    "invoice_date": "11-05-2019", 
+    "invoice_id": 2, 
+    "sales_amount": 2019.97, 
+    "total_amount": 4745.937
+  }, 
+  "3": {
+    "customer_id": 3, 
+    "gst": 70.9985, 
+    "invoice_date": "11-09-2019", 
+    "invoice_id": 3, 
+    "sales_amount": 1419.97, 
+    "total_amount": 3611.937
+  }, 
+  "4": {
+    "customer_id": 4, 
+    "gst": 124.9985, 
+    "invoice_date": "12-04-2019", 
+    "invoice_id": 4, 
+    "sales_amount": 2719.97, 
+    "total_amount": 2624.9685
+  }, 
+  "5": {
+    "customer_id": 5, 
+    "gst": 100.9985, 
+    "invoice_date": "12-08-2019", 
+    "invoice_id": 5, 
+    "sales_amount": 1799.97, 
+    "total_amount": 2120.9685
+  }, 
+  "6": {
+    "customer_id": 6, 
+    "gst": 70.9985, 
+    "invoice_date": "12-15-2019", 
+    "invoice_id": 6, 
+    "sales_amount": 3019.97, 
+    "total_amount": 1490.9685
+  }, 
+  "7": {
+    "customer_id": 7, 
+    "gst": 124.9985, 
+    "invoice_date": "01-02-2020", 
+    "invoice_id": 7, 
+    "sales_amount": 2269.96, 
+    "total_amount": 2624.9685
+  }, 
+  "8": {
+    "customer_id": 8, 
+    "gst": 100.9985, 
+    "invoice_date": "01-05-2020", 
+    "invoice_id": 8, 
+    "sales_amount": 3619.96, 
+    "total_amount": 2120.9685
+  }, 
+  "9": {
+    "customer_id": 9, 
+    "gst": 70.9985, 
+    "invoice_date": "01-22-2020", 
+    "invoice_id": 9, 
+    "sales_amount": 2449.96, 
+    "total_amount": 1490.9685
+  }, 
+  "10": {
+    "customer_id": 10, 
+    "gst": 135.9985, 
+    "invoice_date": "01-25-2020", 
+    "invoice_id": 10, 
+    "sales_amount": 3619.96, 
+    "total_amount": 2844.9685
+  }
+}

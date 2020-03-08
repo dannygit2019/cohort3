@@ -1,0 +1,85 @@
+<html>
+<head>
+<script type="text/javascript">
+	function httpGetAsync(theUrl, callback) {
+	    var xmlHttp = new XMLHttpRequest();
+	    xmlHttp.onreadystatechange = function() {
+	        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+	            callback(xmlHttp.responseText);
+	    }
+	    xmlHttp.open("GET", theUrl, true); // true for asynchronous
+	    xmlHttp.send(null);
+	}
+	// httpGetAsync('http://127.0.0.1:5000/store',function(response) {
+	// 	alert(response)
+	// })
+
+	// httpGetAsync('http://127.0.0.1:5000/all',function(response) {
+	// 	console.log(response)
+		// document.getElementById('myElement').textContent=response
+	// })
+</script>
+</head>
+<body>
+
+<div id="myElement">
+	<!-- Hello, world002! -->
+	<table class="centered thick-border" >
+
+		<p style="font-weight: bold">*** Below is the data from Customer (ID, F_Name, L_Name, Address, Phone, Email) ***</p>
+		<tr>
+			{% for v in cus.values() %}
+				<tr >{{v.customer_id}},</tr>&emsp;&emsp;
+				<tr >{{v.first_name}},</tr>&emsp;&emsp;
+				<tr >{{v.last_name}},</tr>&emsp;&emsp;
+				<tr >{{v.address}},</tr>&emsp;&emsp;
+				<tr >{{v.phone}},</tr>&emsp;&emsp;
+				<tr >{{v.email}}</tr>&emsp;&emsp;
+				<!-- <span>({{ v.customer_id }}, &nbsp;&nbsp;&nbsp;{{ v.first_name }}, &nbsp;&nbsp;&nbsp;{{ v.last_name }}, &nbsp;&nbsp;&nbsp;{{ v.address}}, &nbsp;&nbsp;&nbsp;{{v.phone}}, &nbsp;&nbsp;&nbsp;{{v.email}})</span> -->
+				<br>
+				
+			{% endfor %}
+		</tr>
+		<p style="font-weight: bold">*** Below is the data from Product (Product_id, Prod_name, Prod_price) ***</p>
+		<tr>
+			{% for v in prod.values() %}
+				<tr >{{v.prod_id}},</tr>&emsp;&emsp;
+				<tr >{{v.prod_name}},</tr>&emsp;&emsp;
+				<tr >{{v.prod_price}}</tr>&emsp;&emsp;
+				<br>
+				<!-- <span>({{ v.prod_id }}, &nbsp;&nbsp;&nbsp;{{ v.prod_name }}, &nbsp;&nbsp;&nbsp;{{ v.prod_price }})</span>
+				<br> -->
+			{% endfor %}
+		</tr>
+		<p style="font-weight: bold">*** Below is the data from Invoice (Inv_id, Customer_id, Inv_Date, Sales Amt, GST, Total) ***</p>
+		<tr>
+			{% for v in inv.values() %}
+				<tr >{{v.invoice_id}},</tr>&emsp;&emsp;
+				<tr >{{v.customer_id}},</tr>&emsp;&emsp;
+				<tr >{{v.invoice_date}},</tr>&emsp;&emsp;
+				<tr >{{v.sales_amount}},</tr>&emsp;&emsp;
+				<tr >{{v.gst}},</tr>&emsp;&emsp;
+				<tr >{{v.total_amount}}</tr>&emsp;&emsp;
+				<br>
+				<!-- <span>({{ v.invoice_id }}, &nbsp;&nbsp;&nbsp;{{ v.customer_id }}, &nbsp;&nbsp;&nbsp;{{ v.invoice_date }}, &nbsp;&nbsp;&nbsp;{{ v.sales_amount}}, &nbsp;&nbsp;&nbsp;{{v.gst}}, &nbsp;&nbsp;&nbsp;{{v.total_amount}})</span>
+				<br> -->
+			{% endfor %}
+
+		</tr>
+		<p style="font-weight: bold">*** Below is the data from Invoice_Detail (detail_id, invoice_id, prod_id, quantity) ***</p>
+		<tr>
+			{% for v in detail.values() %}
+				<tr >{{v.detail_id}},</tr>&emsp;&emsp;
+				<tr >{{v.invoice_id}},</tr>&emsp;&emsp;
+				<tr >{{v.prod_id}},</tr>&emsp;&emsp;
+				<tr >{{v.quantity}}</tr>&emsp;&emsp;
+				<br>
+				<!-- <span>({{ v.detail_id }}, &nbsp;&nbsp;&nbsp;{{ v.invoice_id }}, &nbsp;&nbsp;&nbsp;{{ v.prod_id }}, &nbsp;&nbsp;&nbsp;{{ v.quantity}})</span>
+				<br> -->
+			{% endfor %}
+		</tr>
+	</table>
+</div>
+
+</body>
+</html>

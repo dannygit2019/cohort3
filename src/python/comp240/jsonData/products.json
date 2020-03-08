@@ -1,0 +1,52 @@
+{
+  "1": {
+    "prod_id": 1, 
+    "prod_name": "Dishwasher", 
+    "prod_price": 599.99
+  }, 
+  "2": {
+    "prod_id": 2, 
+    "prod_name": "Wine Cooler", 
+    "prod_price": 199.99
+  }, 
+  "3": {
+    "prod_id": 3, 
+    "prod_name": "Microwave", 
+    "prod_price": 159.99
+  }, 
+  "4": {
+    "prod_id": 4, 
+    "prod_name": "Mini Oven", 
+    "prod_price": 299.99
+  }, 
+  "5": {
+    "prod_id": 5, 
+    "prod_name": "Electric Stove", 
+    "prod_price": 899.99
+  }, 
+  "6": {
+    "prod_id": 6, 
+    "prod_name": "Gas Stove", 
+    "prod_price": 1119.99
+  }, 
+  "7": {
+    "prod_id": 7, 
+    "prod_name": "Blender", 
+    "prod_price": 129.99
+  }, 
+  "8": {
+    "prod_id": 8, 
+    "prod_name": "Portable Heater", 
+    "prod_price": 119.99
+  }, 
+  "9": {
+    "prod_id": 9, 
+    "prod_name": "Dining aTable Set", 
+    "prod_price": 899.99
+  }, 
+  "10": {
+    "prod_id": 10, 
+    "prod_name": "Washer", 
+    "prod_price": 999.99
+  }
+}

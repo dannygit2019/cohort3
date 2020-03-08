@@ -1,0 +1,82 @@
+{
+  "1": {
+    "address": "123 Riverbend SE", 
+    "customer_id": 1, 
+    "email": "rachel@telus.ca", 
+    "first_name": "Rachel", 
+    "last_name": "Smith", 
+    "phone": "403-324-3455"
+  }, 
+  "2": {
+    "address": "435 Crest Place NE", 
+    "customer_id": 2, 
+    "email": "bobby@gmail.com", 
+    "first_name": "Bobby", 
+    "last_name": "Smith", 
+    "phone": "587-321-4564"
+  }, 
+  "3": {
+    "address": "231 Crest Place NE", 
+    "customer_id": 3, 
+    "email": "rebecca@hotmail.com", 
+    "first_name": "Rebecca", 
+    "last_name": "Wang", 
+    "phone": "403-132-5798"
+  }, 
+  "4": {
+    "address": "435 Redstone NE", 
+    "customer_id": 4, 
+    "email": "tim@gmail.com", 
+    "first_name": "Tim", 
+    "last_name": "Cormier", 
+    "phone": "403-432-4532"
+  }, 
+  "5": {
+    "address": "568 NoseHill", 
+    "customer_id": 5, 
+    "email": "phil@shaw.ca", 
+    "first_name": "Phil", 
+    "last_name": "Murray", 
+    "phone": "587-091-0934"
+  }, 
+  "6": {
+    "address": "987 Brightton SE", 
+    "customer_id": 6, 
+    "email": "shane@gmail.com", 
+    "first_name": "Shane", 
+    "last_name": "James", 
+    "phone": "587-765-7898"
+  }, 
+  "7": {
+    "address": "356 Willow Park", 
+    "customer_id": 7, 
+    "email": "john@telus.ca", 
+    "first_name": "John", 
+    "last_name": "Sandhu", 
+    "phone": "587-321-2343"
+  }, 
+  "8": {
+    "address": "1213 Brightton SE", 
+    "customer_id": 8, 
+    "email": "dave@hotmai.com", 
+    "first_name": "Dave", 
+    "last_name": "Hynes", 
+    "phone": "403-554-2321"
+  }, 
+  "9": {
+    "address": "451 Kensington", 
+    "customer_id": 9, 
+    "email": "cristina@gmail.com", 
+    "first_name": "Cristina", 
+    "last_name": "Davey", 
+    "phone": "587-090-2931"
+  }, 
+  "10": {
+    "address": "189 SunnySide", 
+    "customer_id": 10, 
+    "email": "dave@shaw.ca", 
+    "first_name": "Dave", 
+    "last_name": "James", 
+    "phone": "403-432-7094"
+  }
+}
